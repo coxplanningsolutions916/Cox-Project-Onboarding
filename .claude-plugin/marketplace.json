@@ -1,0 +1,16 @@
+{
+  "name": "cox-plugins",
+  "owner": {
+    "name": "Chris Cox",
+    "email": "chris.cox@coxplanningsolutions.com",
+    "url": "https://www.coxplanningsolutions.com"
+  },
+  "description": "Cox Planning Solutions internal Claude Code plugins.",
+  "plugins": [
+    {
+      "name": "cox-proposals",
+      "source": "./",
+      "description": "Sales/proposals automation, lead → onboarding: new-lead-intake-screen, paid-findings-report, proposal-scoping, change-order-scoping, deal-onboarding. Estimating basis and payment/invoicing config grounded in real Cox operations."
+    }
+  ]
+}
