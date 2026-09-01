@@ -46,7 +46,7 @@ Demo within ~3–5 days of signature (so A-Plus can show their CEO); City of Sac
 
 ## E — Payment / billing
 
-Annual subscription invoiced once via Harvest for the anchor client until recurring-billing infrastructure (Productive or equivalent) is built for the mass-market rollout. Per-property ISRs invoiced per order.
+Annual subscription invoiced in **Productive** for the anchor client (dedicated recurring-billing infrastructure for the mass-market rollout is a later build). Per-property ISRs invoiced per order.
 
 ## Open items for Chris
 

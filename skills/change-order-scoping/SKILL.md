@@ -1,6 +1,6 @@
 ---
 name: change-order-scoping
-description: "Scope a change order to an active Cox Planning Solutions Task Order (Mode 2). Use when an existing client wants added scope, a scope revision, or a budget adjustment to an engagement already under a signed Task Order, and the task is to document only what is changing and produce the change-order handoff memo. Triggers: 'change order,' 'add scope,' 'additional scope,' 'scope revision,' 'modify the task order,' 'budget adjustment,' 'expand the engagement,' or a reference to an existing Task Order plus new work. Do NOT use for a brand-new engagement or agreement (use proposal-scoping), for the initial unpaid lead screen (use new-lead-intake-screen), or for onboarding (use project-setup-workbook-asana-sync)."
+description: "Scope a change order to an active Cox Planning Solutions Task Order (Mode 2). Use when an existing client wants added scope, a scope revision, or a budget adjustment to an engagement already under a signed Task Order, and the task is to document only what is changing and produce the change-order handoff memo. Triggers: 'change order,' 'add scope,' 'additional scope,' 'scope revision,' 'modify the task order,' 'budget adjustment,' 'expand the engagement,' or a reference to an existing Task Order plus new work. Do NOT use for a brand-new engagement or agreement (use proposal-scoping), for the initial unpaid lead screen (use new-lead-intake-screen), or for onboarding (use deal-onboarding)."
 ---
 
 # Change Order Scoping (Mode 2)

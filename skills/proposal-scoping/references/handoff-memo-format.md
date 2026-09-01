@@ -4,7 +4,7 @@ The structured memo the proposal coordinator turns into the Automator/PandaDoc c
 
 ```
 PROPOSAL HANDOFF MEMO
-For: Megan Fields — Cox Planning Solutions
+For: Michelle Ross — Cox Planning Solutions
 Prepared by: Chris Cox via Claude
 Date: [Date]
 ─────────────────────────────────────────────────────────

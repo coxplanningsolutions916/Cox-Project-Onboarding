@@ -4,7 +4,7 @@ Same handoff memo as a new proposal, with PROPOSAL TYPE set to "Change Order" an
 
 ```
 PROPOSAL HANDOFF MEMO
-For: Megan Fields — Cox Planning Solutions
+For: Michelle Ross — Cox Planning Solutions
 Prepared by: Chris Cox via Claude
 Date: [Date]
 ─────────────────────────────────────────────────────────

@@ -36,7 +36,7 @@ Use the real cash-cost basis when known. Example from the screening-tool build: 
 - Offer a **free trial** (time- or lookup-limited, single jurisdiction) that converts to paid.
 - Annual pricing improves cash flow and commitment; offer it at a discount to monthly.
 - Anchor/founding clients may get a locked founding rate in exchange for being a reference or case study.
-- Billing infrastructure: until recurring billing (Productive or equivalent) is built, start anchor clients on a simple annual Harvest invoice — do not let the infra gap block the deal.
+- Billing infrastructure: recurring billing now runs in **Productive** — the sales deal's services become the project budget at onboarding, and anchor clients are invoiced annually from Productive. Do not let infra concerns block the deal.
 - Subscription is a candidate Operations Manual addition to the Billing Types section; flag for the Pending Updates queue.
 
 ## Step 1 pricing (1a / 1b)
