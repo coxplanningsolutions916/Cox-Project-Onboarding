@@ -1,6 +1,6 @@
 ---
 name: deal-onboarding
-description: "Onboard an approved/won Cox Planning Solutions deal — take a deal card with an approved proposal all the way to a live billable project in Productive plus a drafted down-payment invoice ready to send. Use when a proposal has been approved/signed (or the Automator card is Won) and the task is to stand up the engagement: create the Productive project + budget, copy the scoped services onto it, and draft the first (down-payment) invoice per the proposal's payment terms. Triggers: 'onboard [client/deal],' 'onboard this deal,' 'the proposal is approved/signed,' 'they signed,' 'kick off the project,' 'set up the project and down payment invoice,' 'take this deal to a project,' 'won deal,' or a deal card plus 'onboard.' Do NOT use for the pre-proposal paid deposit (use paid-findings-report), for building/pricing the proposal (use proposal-scoping), for a change order to an existing Task Order (use change-order-scoping), or for day-to-day ops."
+description: "Onboard an approved/won Cox Planning Solutions deal — take a deal card with an approved proposal all the way to a live billable project in Productive plus a drafted down-payment invoice ready to send. Use when a proposal has been approved/signed (or the Automator card is Won) and the task is to stand up the engagement: create the Productive project + budget, copy the scoped services onto it, put the project on the dashboard, and draft the first (down-payment) invoice per the proposal's payment terms. Triggers: 'onboard [client/deal],' 'onboard this deal,' 'the proposal is approved/signed,' 'they signed,' 'kick off the project,' 'set up the project and down payment invoice,' 'take this deal to a project,' 'won deal,' or a deal card plus 'onboard.' Do NOT use for the pre-proposal paid deposit (use paid-findings-report), for building/pricing the proposal (use proposal-scoping), for a change order to an existing Task Order (use change-order-scoping), or for day-to-day ops."
 ---
 
 # Deal Onboarding (approved proposal → project + down-payment invoice)
@@ -29,6 +29,37 @@ Use the **cox-productive** MCP. This mirrors `~/code/cox-productive-tools/onboar
 5. **Registry** — set the registry links / file the onboarding entry so re-runs self-exclude.
 
 Report the project id, budget id, and the services total ($) copied.
+
+## Stage 1.5 — Put the project on the dashboard (not optional)
+
+Every project gets a dashboard entry, whatever its size. The dashboard is the firm's
+financial record — portfolio totals, the monthly billing cycle, AR and earned value all read
+from it — so a project that is missing from it is missing from the firm's numbers entirely,
+and its client statement is also the customer-facing PM view Cox sends as a link.
+
+This used to be a step someone had to remember, and on 2026-09-11 five live engagements
+worth **$92,992** were found running unregistered — Napa 55's $86,492 Cox job among them,
+signed and logging time while invisible to every report. It is automatic now:
+
+```bash
+python ~/code/cox-productive-tools/discover_projects.py --pid=<project_id> --write
+```
+
+`onboard_from_deal.py --live` already calls this at the end of Stage 1, so the script path
+needs nothing extra — but if you built the project through the MCP tools instead, run it
+yourself before moving on. It registers the project in **both** registries (`project_ids.json`
+for the dashboard and `qbo_crosswalk.json`, which every billing engine resolves a pid
+through — writing only the first is what silently hid three projects until that same
+morning) and scaffolds the budget file from the budget's services.
+
+Then confirm it landed:
+
+```bash
+cd ~/code/cox-productive-tools && .venv/bin/python discover_projects.py   # must report nothing outstanding
+```
+
+The nightly refresh fills in schedule, earned value and billing figures; the statement builds
+itself from there. Hand the client its link once the first invoice goes out.
 
 ## Stage 2 — Draft the down-payment invoice (per the proposal's terms)
 
@@ -63,3 +94,4 @@ On your **explicit go-ahead**, send it: `qbo_sales_send_invoice(invoice_id, cust
 - **Chronological invoice #s.** Let QBO auto-number; never set a custom reference.
 - **One deal at a time.** Onboarding is a client commitment — explicit per deal, never a bulk sweep. (`onboard_from_deal.py --scan` is read-only and only *lists* deals awaiting onboarding for the brief.)
 - **Credit deposits.** Any paid-findings deposit credits the down payment.
+- **No project without a dashboard.** Do not report onboarding complete until `discover_projects.py` reports nothing outstanding. A project that is not on the dashboard is not in the firm's financial numbers, however small the fee.
