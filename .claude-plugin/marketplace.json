@@ -10,7 +10,7 @@
     {
       "name": "cox-proposals",
       "source": "./",
-      "description": "Sales/proposals automation, lead → onboarding: new-lead-intake-screen, paid-findings-report, proposal-scoping, change-order-scoping, deal-onboarding. Estimating basis and payment/invoicing config grounded in real Cox operations."
+      "description": "Sales/proposals automation, lead \u2192 onboarding: new-lead-intake-screen, paid-findings-report, proposal-scoping, change-order-scoping, roadmap-scoping (the Entitlement Roadmap front door), deal-onboarding. Estimating basis and payment/invoicing config grounded in real Cox operations."
     }
   ]
 }
