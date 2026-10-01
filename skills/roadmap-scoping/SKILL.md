@@ -1,6 +1,6 @@
 ---
 name: roadmap-scoping
-description: "Produce and sell a Cox Planning Solutions Entitlement Roadmap (Mode 3) — the $2,500 front-door product that shows a prospect the whole project before they commit: what to build, how it gets approved, the permit stack, schedule, and order-of-magnitude costs, reviewed by a senior planner and delivered within 48 hours of the request. Also handles the $500 Snapshot below it and the $5,000 Roadmap Plus above it. Use when a prospect asks for a roadmap, when the intake screen is done and the next step is the Roadmap rather than a free findings email, or when a Roadmap request lands from the website, Automator, or a call. Triggers: 'roadmap,' 'entitlement roadmap,' 'build a roadmap for [address],' 'they want the roadmap,' 'snapshot,' 'roadmap plus,' 'what would it take to build on [parcel],' 'roadmap requested,' 'deliver the roadmap.' Do NOT use for the free intake screen alone (use new-lead-intake-screen), for a Step 1b ISR or Step 2 proposal (use proposal-scoping), or for a change order (use change-order-scoping)."
+description: "Produce and sell a Cox Planning Solutions Entitlement Roadmap (Mode 3) — the $2,500 front-door product that shows a prospect the whole project before they commit: what to build, how it gets approved, the permit stack, schedule, and order-of-magnitude costs, reviewed by a senior planner and delivered within 48 hours of the request. Also handles the $500 Phase 1A Screening below it (model report plus one staff hour) and the $5,000 Roadmap Plus above it. Use when a prospect asks for a roadmap, when the intake screen is done and the next step is the Roadmap rather than a free findings email, or when a Roadmap request lands from the website, Automator, or a call. Triggers: 'roadmap,' 'entitlement roadmap,' 'build a roadmap for [address],' 'they want the roadmap,' '1A screening,' 'phase 1a,' 'roadmap plus,' 'what would it take to build on [parcel],' 'roadmap requested,' 'deliver the roadmap.' Do NOT use for the free intake screen alone (use new-lead-intake-screen), for a Step 1b ISR or Step 2 proposal (use proposal-scoping), or for a change order (use change-order-scoping)."
 ---
 
 # Entitlement Roadmap (Mode 3)
@@ -13,11 +13,11 @@ Decided Sept 30, 2026: one product at one price, sized by scope rather than disc
 
 | Rung | Price | What the client gets | Who buys it |
 |------|-------|----------------------|-------------|
-| **Snapshot** | $500 | Model output only: zoning and General Plan read, constraint screen, a one-page go or no-go with the three questions to answer next. No session. Fully credited to a Roadmap within 60 days. | Owners and brokers testing an idea; the Q1 2027 promotion |
-| **Roadmap** | $2,500 | The Snapshot plus the entitlement pathway, permit stack, approval schedule, order-of-magnitude cost ranges with what firms each one up, and a 2-hour senior planner review and working session. Closes with a priced Step 1 or 2 proposal. | Developers and investors deciding whether to pursue a parcel |
+| **Phase 1A Screening** | $500 | The model-generated screening report (ten sections: decision, property record, rules and levers, fit, constraints with the biology flags, aerial read, approval set, cost and schedule ranges, assumption register, go or no-go) with one hour of Cox staff review before it goes out. Credited to a Roadmap within 60 days. | Every persona's entry point; the launch campaign's free product |
+| **Roadmap** | $2,500 | The 1A report taken to Cox's recommendation with four hours of senior planner time: corrections, strategy and sequencing, the prioritized verification plan, and the working session. Closes with a priced Step 1b or Step 2 proposal. | Developers and investors deciding whether to pursue a parcel |
 | **Roadmap Plus** | $5,000 | The Roadmap for a project that fails the scale test: adds a second session, a board-ready summary, and a sub-consultant read (biology, engineering) where needed. | Institutional developers, the ABM list, public agencies |
 
-Below $500 there is nothing to sell: the free intake screen is the lead magnet. The Roadmap price is never discounted; promotions give away the Snapshot.
+Below $500 there is nothing to sell: the free intake screen is the lead magnet. The Roadmap price is never discounted; the launch campaign gives away 100 Phase 1A screens. Even the $500 product carries a staff hour, because expert planning staff is what sets Cox apart from automated real-estate analysis apps.
 
 ## Inputs to gather
 
@@ -34,9 +34,9 @@ Proceed with an address alone if that is all there is; flag the gaps in the memo
 ## Stage 1 — Confirm the request and the rung
 
 1. Find or create the Automator opportunity (`list_opportunities` / `create_opportunity`), confirm the contact is the decision maker, and set `source` to one of the canonical names (Google Ads, LinkedIn, Direct Mail, Referral, Existing Client, Website, BIA Workshop, Podcast, ABM, Meta Ads, Public Agency). Move the opportunity to **Roadmap Requested**.
-2. Run the scale test. Record the rung and why in the registry. A Snapshot can always be upgraded; never downgrade a Plus to fit a budget without Chris.
+2. Run the scale test. Record the rung and why in the registry. A 1A Screening can always be upgraded; never downgrade a Plus to fit a budget without Chris.
 3. Scaffold `Sales/Proposals/[Lead Name]/` if it does not exist (`new-lead-intake-screen` Stage 1) and create the `Roadmap/` folder under it.
-4. Invoice. The Roadmap and Plus are paid on request through a QuickBooks pay-link invoice (sequence in `references/roadmap-setup.md`, section B); the Snapshot too unless it is the promotion. Work starts on payment unless Chris says otherwise. State the credit on the invoice note: a Snapshot credits to a Roadmap within 60 days; a Roadmap credits nothing but closes with a proposal.
+4. Invoice. The Roadmap and Plus are paid on request through a QuickBooks pay-link invoice (sequence in `references/roadmap-setup.md`, section B); the 1A Screening too unless it is one of the 100 campaign screens. Work starts on payment unless Chris says otherwise. State the credit on the invoice note: a 1A Screening credits to a Roadmap within 60 days; a Roadmap credits nothing but closes with a proposal.
 
 ## Stage 2 — Screen the property (the model input)
 
@@ -63,9 +63,9 @@ Until the Cox Entitlement Program Model (the Claude Code engine in the Sept 25, 
 
 ## Stage 4 — Senior planner review and the session
 
-The 2-hour senior planner review is what the client is paying for. Work through `references/qc-checklist.md` with Chris or Kristin before anything goes to the client; the checklist is the gate, not a suggestion. Then hold the working session with the client (the Roadmap includes one; Plus includes two), walk the memo, capture what they said about their timeline, capital, and appetite, and revise the memo once if the session changed the recommendation.
+The 2-hour senior planner review is what the client is paying for. Work through `references/qc-checklist.md` with Chris or Kristin before anything goes to the client; the checklist is the gate, not a suggestion. Then hold the working session with the client (the Roadmap's four staff hours include it; Plus includes two sessions), walk the memo, capture what they said about their timeline, capital, and appetite, and revise the memo once if the session changed the recommendation.
 
-Delivery target: **memo sent within 48 hours of the request** (24 hours for a Snapshot). If the screen turns up something that needs field confirmation before the memo can stand behind a recommendation, say so in the memo and keep the clock; the Roadmap is a desktop product.
+Delivery target: **memo sent within 48 hours of the request** (24 hours for a Phase 1A Screening). If the screen turns up something that needs field confirmation before the memo can stand behind a recommendation, say so in the memo and keep the clock; the Roadmap is a desktop product.
 
 ## Stage 5 — Deliver, record, and convert
 

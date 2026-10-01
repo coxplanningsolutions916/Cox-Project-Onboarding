@@ -21,7 +21,7 @@ One note up front if there is a single issue the client raised that the recommen
 Table 1, Property record: location and APNs; size; zoning (now and proposed); General Plan designation and plan status (adopted, date); parking rule in force; transit; nearby water; habitat plan coverage (inside or outside, by map). Every row has a source behind it in the screen; a row without one reads "[FACT NEEDED]".
 
 ## 4.0 Historic Aerial Analysis
-What the multi-year aerial record shows: condition, disturbance, structures, ponding or its absence in wet-season frames, trees to check. Figure 1: annotated current aerial plus a filmstrip of dated frames; Google attribution retained on the image. Close with what the field screening will confirm. (Snapshot: one paragraph, no figure.)
+What the multi-year aerial record shows: condition, disturbance, structures, ponding or its absence in wet-season frames, trees to check. Figure 1: annotated current aerial plus a filmstrip of dated frames; Google attribution retained on the image. Close with what the field screening will confirm. (Phase 1A Screening: one paragraph, no figure.)
 
 ## 5.0 What to Build
 The market read in plain terms: rents or comps, what form pencils and why, realistic yield versus the paper maximum, what buyers of entitled sites want. State what Cox is not: "this is a desktop read, not an appraisal or a market study."
@@ -49,7 +49,7 @@ Name the proposal (Step 1b ISR, or Steps 2 and 3), what it authorizes, what it r
 
 ---
 
-### Snapshot variant (one page)
+### Phase 1A Screening variant (one page)
 Sections 1, 2 (the three lines), 3 (the table, shorter), 4 (one paragraph), 8 (as "the three questions to answer next"), 11, 12 (the Roadmap as the next step, with the $500 credit stated). No figures, no schedule, no budget.
 
 ### Roadmap Plus additions

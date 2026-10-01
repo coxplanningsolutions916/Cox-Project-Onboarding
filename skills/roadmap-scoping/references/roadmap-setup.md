@@ -8,13 +8,13 @@
 5. A Roadmap that does not convert within 90 days is closed lost with a reason ("No response", "No longer interested", "Hired someone else", "Price too high").
 
 ## B. QuickBooks (pay on request)
-Same rail as the paid findings deposit: `qbo_contact_search_customer` → `qbo_contact_create_customer` if needed → `qbo_sales_create_invoice` with one line on the `01 Assessment` service item (product_id 85), `taxable=false`, description "Entitlement Roadmap — <address>" (or Snapshot / Roadmap Plus), the standard payment-options note, and the credit line for a Snapshot ("credited to an Entitlement Roadmap ordered within 60 days"). Leave the invoice number blank (QBO sequences it). Do not enable card payment unless the client asks; then add the 3% line. Confirm the email, then `qbo_sales_send_invoice`. Paid status syncs to Productive through the weekly payment sync.
+Same rail as the paid findings deposit: `qbo_contact_search_customer` → `qbo_contact_create_customer` if needed → `qbo_sales_create_invoice` with one line on the `01 Assessment` service item (product_id 85), `taxable=false`, description "Entitlement Roadmap — <address>" (or Phase 1A Screening / Roadmap Plus), the standard payment-options note, and the credit line for a Phase 1A Screening ("credited to an Entitlement Roadmap ordered within 60 days"). Leave the invoice number blank (QBO sequences it). Do not enable card payment unless the client asks; then add the 3% line. Confirm the email, then `qbo_sales_send_invoice`. Paid status syncs to Productive through the weekly payment sync.
 
 ## C. Productive (after payment, or on Chris's say-so)
 1. `list_companies` then `create_company` with the legal entity if absent.
 2. `create_project(name="<Client short> – Entitlement Roadmap (<address>)", company_id=...)`.
-3. `create_budget(project_id, company_id, name="T.O. 1 — Entitlement Roadmap (<address>)")` and `add_service(deal_id, name="Entitlement Roadmap — <address>", price=<500|2500|5000>, phase="01 Assessment", estimated_hours=<3|8.5|13>)`. Hours go in the field, never the name.
-4. For a Snapshot, add the placeholder `T.O. 2 — Entitlement Roadmap (credit $500 applies within 60 days)` budget so the credit has a home.
+3. `create_budget(project_id, company_id, name="T.O. 1 — Entitlement Roadmap (<address>)")` and `add_service(deal_id, name="Entitlement Roadmap — <address>", price=<500|2500|5000>, phase="01 Assessment", estimated_hours=<1.25|4|7>)`. Hours go in the field, never the name.
+4. For a Phase 1A Screening, add the placeholder `T.O. 2 — Entitlement Roadmap (credit $500 applies within 60 days)` budget so the credit has a home.
 5. Log time to the Roadmap service; the Goal 3 export counts budgets whose deal or project name contains "Roadmap".
 
 ## D. Drive
