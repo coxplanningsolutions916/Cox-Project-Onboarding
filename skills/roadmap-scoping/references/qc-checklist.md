@@ -1,4 +1,4 @@
-# Roadmap QC checklist — the senior planner's gate (2 hours, included in the fee)
+# Roadmap QC checklist — the senior planner's gate (inside the Roadmap's four staff hours)
 
 Work top to bottom with the memo and the screen side by side. Any unchecked item blocks the send.
 

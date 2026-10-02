@@ -1,6 +1,6 @@
 {
   "name": "cox-proposals",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Cox Planning Solutions sales/proposals automation, lead \u2192 onboarding. Skills: new-lead-intake-screen (folder setup, property/regulatory screen, free findings email), paid-findings-report (charge a credited $500/$1,000 deposit for the initial analysis, stand the paying lead up as a client in Productive with a QBO pay-link invoice), proposal-scoping (scope, fee backup, deliverables as Productive services with an hours basis, branded proposal), change-order-scoping (modify a Task Order, grounded in live actuals-vs-budget), roadmap-scoping (Mode 3: the $2,500 Entitlement Roadmap front door \u2014 Snapshot $500 / Roadmap $2,500 / Roadmap Plus $5,000 by scale test, 48-hour delivery, senior-planner QC gate, Automator Roadmap stages, QBO pay link), deal-onboarding (approved/won deal \u2192 Productive project + budget + copied services + drafted down-payment invoice per the proposal's terms, draft\u2192approve\u2192send). Estimating basis from real Cox budgets. Each deal is a live registry \u2014 the Automator opportunity plus a 00_Deal_Registry.md in the proposal folder.",
   "author": {
     "name": "Chris Cox",

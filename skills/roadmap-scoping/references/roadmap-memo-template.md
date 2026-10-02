@@ -21,7 +21,7 @@ One note up front if there is a single issue the client raised that the recommen
 Table 1, Property record: location and APNs; size; zoning (now and proposed); General Plan designation and plan status (adopted, date); parking rule in force; transit; nearby water; habitat plan coverage (inside or outside, by map). Every row has a source behind it in the screen; a row without one reads "[FACT NEEDED]".
 
 ## 4.0 Historic Aerial Analysis
-What the multi-year aerial record shows: condition, disturbance, structures, ponding or its absence in wet-season frames, trees to check. Figure 1: annotated current aerial plus a filmstrip of dated frames; Google attribution retained on the image. Close with what the field screening will confirm. (Phase 1A Screening: one paragraph, no figure.)
+What the multi-year aerial record shows: condition, disturbance, structures, ponding or its absence in wet-season frames, trees to check. Figure 1: annotated current aerial plus a filmstrip of dated frames; Google attribution retained on the image. Close with what the field screening will confirm. (Step 1a Screening: one paragraph, no figure.)
 
 ## 5.0 What to Build
 The market read in plain terms: rents or comps, what form pencils and why, realistic yield versus the paper maximum, what buyers of entitled sites want. State what Cox is not: "this is a desktop read, not an appraisal or a market study."
@@ -45,12 +45,12 @@ Cited sources only: code sections, the General Plan and its adoption date, Maste
 > We meet professional standards for planning, environmental, civil engineering, architecture, and landscape architecture work in California. We do not guarantee approvals or agency timelines. The figures here are planning estimates, not a fee proposal. Fees are set in each Task Order. Prepared for <entity> for this property and this project.
 
 ## 12.0 Next Steps
-Name the proposal (Step 1b ISR, or Steps 2 and 3), what it authorizes, what it resolves from section 8, and that Cox is ready to start. Signature block: Chris Cox, Principal Planner / Landscape Architect.
+Name the proposal (usually the Step 1b ISR: site surveys and data collection), what it authorizes, and say that Step 2 is conceptual design and alternatives, with engineering front and center, so the client sees the project take shape before permitting (Step 4) is discussed; then, what it resolves from section 8, and that Cox is ready to start. Signature block: Chris Cox, Principal Planner / Landscape Architect.
 
 ---
 
-### Phase 1A Screening variant (one page)
-Sections 1, 2 (the three lines), 3 (the table, shorter), 4 (one paragraph), 8 (as "the three questions to answer next"), 11, 12 (the Roadmap as the next step, with the $500 credit stated). No figures, no schedule, no budget.
+### Step 1a Screening variant (one page)
+Sections 1, 2 (the three lines), 3 (the table, shorter), 4 (one paragraph), 8 (as "the three questions to answer next"), 11, 12 (the Roadmap as the next step, at $2,500; no credit). No figures, no schedule, no budget.
 
 ### Roadmap Plus additions
 The program budget table in 9.0; a one-page board summary on the cover side (bottom line, the schedule figure, the budget total with its confidence composition); the sub-consultant read as a short attachment under its author's name.
