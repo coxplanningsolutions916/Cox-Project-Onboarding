@@ -25,7 +25,7 @@ Draft the onboarding invoice per the proposal's payment terms. Same rail as ever
 ## Productive project/budget (cox-productive MCP) — canonical values
 
 - Client-project workflow `60022` · PM (Chris) `1218809` · Subsidiary `59749` · `project_type_id 2` (client)
-- **API fallback** if an old MCP build 422s on `create_project`/`create_budget` (should be patched as of 2026-08-12): `~/code/cox-productive-tools` (`.venv/bin/python`, `import productive_client as pc`) — POST `/projects` with `attributes.project_type_id:2` + company/workflow/project_manager rels; POST `/deals` with `budget:true, deal_type_id:2, date:<today>, currency:"USD"` + company/project/responsible/subsidiary rels. `onboard_from_deal.py <sales_deal_id> --live` does the whole project+budget+copy-services+registry in one shot.
+- **API fallback** if an old MCP build 422s on `create_project`/`create_budget` (should be patched as of 2026-08-12): `~/code/cox-productive-tools` (`.venv/bin/python`, `import productive_client as pc`) — POST `/projects` with `attributes.project_type_id:2` + company/workflow/project_manager rels; POST `/deals` with `budget:true, deal_type_id:2, date:<today>, currency:"USD"` + company/project/responsible/subsidiary rels. `onboard_from_deal.py <sales_deal_id> --live` does the whole project+budget+copy-services+registry in one shot. Add `--template=<template_project_id> --keep="List A|List B"` to build the project from a template, trimmed, instead of blank.
 
 ## QBO phase service item ids (as of 2026-08)
 

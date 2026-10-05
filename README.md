@@ -18,7 +18,7 @@ Modifies an active Task Order: documents only what changed, builds the fee backu
 
 ## Composes with
 - Upstream: the intake screen feeds the rough scope and budget into proposal-scoping.
-- Downstream: `deal-onboarding` picks up onboarding once a proposal is won (won deal → Productive project + budget + drafted down-payment invoice).
+- Downstream: `deal-onboarding` picks up onboarding once a proposal is won (won deal → Productive project built from a native template and trimmed to the deal's services, + budget + drafted down-payment invoice).
 - `cox-document-formatting` for any client-facing language.
 
 ## Notes

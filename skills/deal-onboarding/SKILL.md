@@ -23,12 +23,18 @@ The sales→delivery bridge. Downstream of `proposal-scoping` (which built the e
 Use the **cox-productive** MCP. This mirrors `~/code/cox-productive-tools/onboard_from_deal.py` (the canonical logic; run it directly if you prefer the script path). Order:
 
 1. **Company** — `list_companies(name_contains=)` to dedupe; `create_company` if new.
-2. **Project** — `create_project(name="<Client short> – <Project> (<address>)", company_id)`. (Client type, workflow `60022`, PM Chris `1218809` are applied by the tool — the create_project/create_budget bugs were patched 2026-08-12 so these no longer 422; if an old build still errors, use the API fallback in `references/down-payment-invoice.md`.)
+2. **Project — from a template.** Run `list_templates` and pick the one that fits the scope:
+   - **⛭ Biological Resource Clearance Letter (Reconnaissance-Level)** for a standalone recon-level bio letter. Keep everything.
+   - **⛭ Cox Permitting Project (Master)** for everything else. It's the full 00–05 catalog, so **trim it to the deal**: read its lists with `list_task_lists(<template project_id>)`, map each service on the won sales deal to its task list (one list per billable service), and pass those names as `keep_task_lists`. Every other list is archived, which is reversible.
+
+   Then call `create_project_from_template(template_project_id, name="<Client short> – <Project> (<address>)", company_id, keep_task_lists=[...])`. **Show Chris the keep list before running it.** Check `trim.not_found` in the result: a service with no matching list gets a list made with `create_task_list`.
+
+   Due dates aren't copied, so schedule the tasks afterwards. If a service maps to no template at all (Roadmap, paid findings, one-off work), fall back to `create_project(name, company_id)`, which makes a blank project. Either tool applies the client type, PM Chris `1218809` and the client-project workflow. If an old MCP build 422s, use the API fallback in `references/down-payment-invoice.md`.
 3. **Budget (Task Order)** — `create_budget(project_id, company_id, name="T.O. 1 — <Project>")`.
 4. **Copy the estimate services onto the budget** — read the won **sales deal's** services (`list_services`), and for each, `add_service(deal_id=<new budget id>, name, price, phase, estimated_hours)`. (Services can't be re-parented off a Won sales deal, so they're re-created on the budget — the estimate is NOT re-keyed by hand; it's copied 1:1.)
 5. **Registry** — set the registry links / file the onboarding entry so re-runs self-exclude.
 
-Report the project id, budget id, and the services total ($) copied.
+Report the project id, the template used plus the task lists kept/archived, the budget id, and the services total ($) copied.
 
 ## Stage 1.5 — Put the project on the dashboard (not optional)
 
