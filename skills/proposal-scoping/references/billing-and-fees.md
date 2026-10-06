@@ -15,6 +15,7 @@ Exact role names — no abbreviations or variations.
 | Engineer | $165/hr |
 | Associate Planner | $125/hr |
 | GIS Analyst/CAD Designer | $150/hr |
+| Analyst | $150/hr |
 
 Market adjustments (e.g., Florida ~15.5% below California) and the 20% Preferred Partner discount apply only when Chris directs. Subconsultant costs bill at cost +15% (Article 4.6).
 
