@@ -76,6 +76,7 @@ entitlement model's `projects/<key>/task_order_N.py`). The dashboard turns it in
 | `msa_date` | a client who already signed the Cox MSA v2.0: the date they signed it |
 | `legacy_amendment` | a client on the earlier combined agreement: the article to amend (`"4.6"`). Adds the v2.0 reimbursable amendment (subs cost +20%, other +15%, IRS mileage) going forward, and Section 3.2 cites it. Without it a legacy client stays on its old terms |
 | `reimbursables` | optional override of the standard Section 3.2 Reimbursable expenses text |
+| `signing_options` | `[{id, label, scope, fee, billing}]`: options the client can choose with an Include checkbox in the signing box (e.g. a survey the client asked about). The choice is recorded with the signature and a chosen option creates a task to add it to the budget |
 | optional | `scope_note`, `optional_note` [paragraphs], `additional` `{text, rows [[service, when it applies, charge]]}` |
 
 No internal hours, rates or cost floors (T&M quotes the client's hourly rate only). Worked examples:
