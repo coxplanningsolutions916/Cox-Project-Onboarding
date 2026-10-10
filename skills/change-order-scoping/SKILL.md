@@ -39,7 +39,7 @@ A change order modifies an existing Task Order rather than creating a new agreem
    - **Chris and Kristin supply the anticipated additional hours per line.** Do not invent them;
      present the actuals + basis as the frame and hold for their input.
 4. Build the fee backup for the changed scope only (hours × rate vs. proposed fee, against the real
-   cost floor, plus subs at +15% and 8% PM go-forward). Show Chris; he approves the margin.
+   cost floor, plus subs at +20% and 8% PM go-forward; legacy clients stay at +15% unless the change order adopts the v2.0 amendment). Show Chris; he approves the margin.
 5. Set the single-milestone payment trigger.
 6. **Write the priced change as services on the Productive change-order deal** — one `add_service`
    per changed deliverable (`add_service(deal_id, name="<Phase.Deliverable name> — Revisions",

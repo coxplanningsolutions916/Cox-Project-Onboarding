@@ -17,7 +17,7 @@ Exact role names — no abbreviations or variations.
 | GIS Analyst/CAD Designer | $150/hr |
 | Analyst | $150/hr |
 
-Market adjustments (e.g., Florida ~15.5% below California) and the 20% Preferred Partner discount apply only when Chris directs. Subconsultant costs bill at cost +15% (Article 4.6).
+Market adjustments (e.g., Florida ~15.5% below California) and the 20% Preferred Partner discount apply only when Chris directs. Reimbursables (Cox MSA v2.0 Section 4.5 and Task Order Section 3.2, effective October 9, 2026): subconsultant services at cost +20%; laboratory, printing and other reimbursable costs at cost +15%; mileage at the current IRS rate. A client still on the earlier combined agreement (Article 4.6, everything at cost +15%) moves to these rates only by signing a task order that carries the reimbursable amendment (`legacy_amendment`).
 
 ## The cost floor is not MSRP
 

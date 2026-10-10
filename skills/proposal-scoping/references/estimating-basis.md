@@ -16,7 +16,7 @@ under-state the heavy analytical deliverables (template BRA 9h vs. real median ~
   permit variants like Emergency / Nationwide / Letter-of-Permission) lives in
   `cox-productive-tools/estimating_basis.json`; regenerate with `estimating_basis.py --json`.
 - **Always adjust to the specific job** — this is a starting point grounded in history, not a quote.
-  Then apply the rate table, the cost-floor discipline, subs at +15%, and **8% PM** (go-forward).
+  Then apply the rate table, the cost-floor discipline, subs at +20% (other reimbursables +15%), and **8% PM** (go-forward).
 
 ## Calibrated deliverables (n≥3)
 
