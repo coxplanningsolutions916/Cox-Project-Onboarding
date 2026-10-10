@@ -64,15 +64,18 @@ entitlement model's `projects/<key>/task_order_N.py`). The dashboard turns it in
 | Content key | From |
 |---|---|
 | `number`, `subtitle` | the task-order number for this client ("1" for a new client) and a one-line title with the site |
-| `meta` | `[["Client", ...], ["Attention", ...], ["Project", "<site, city>"], ["Services agreement", "Signed <date>"]` (existing client) or `["Agreement", "Master Services Agreement attached (Part B)"]` (new client), `["Billing type", ...], ["Prepared by", "Chris Cox, CEO / Principal Planner, Cox Planning Solutions"], ["Date", "<Month D, YYYY>"]]` |
+| `meta` | `[["Client", ...], ["Attention", ...], ["Project", "<site, city>"], ["Services agreement", "Signed with Task Order <N>, <date>"]` (legacy client only; for MSA clients the form writes the `Master agreement` line, citing Cox MSA v2.0), `["Billing type", ...], ["Prepared by", "Chris Cox, CEO / Principal Planner, Cox Planning Solutions"], ["Date", "<Month D, YYYY>"]]`. Every task order also gets a `Form: Cox Task Order v2.0 (2026-10-09)` line |
 | `intro` | two or three paragraphs: why this step, what it decides |
 | `lines` | one per service: `{"code": "1.1", "name": <deliverable>, "scope": <1–3 sentences>, "fee": "$X,XXX"}`; pass-through lines plainly named |
 | `total` | the services total, e.g. `"$16,950"` (add "(estimate)" for T&M) |
 | `billing` (+ `milestones`) | the payment terms in words; milestones `[["Payment 1", "On signing", "$6,780"], ...]` (fixed fee defaults 40/40/20) |
 | `schedule` | `[["<milestone>", "<target>"], ...]`, ranges; name what is outside Cox's control |
 | `assumptions`, `exclusions` | one paragraph each; specific, never "assist with" |
-| `agreement` | the governing agreement sentence (existing client: the services agreement by date; new client: "This task order and the Master Services Agreement in Part B are signed together.") |
-| `msa_for` | new clients only: the client's legal name, which attaches the MSA as Part B (one signature signs both) |
+| `agreement` | the governing agreement sentence. Required for a legacy client (the services agreement by date); optional with `msa_for` / `msa_date`, where the form writes one citing Cox MSA v2.0 |
+| `msa_for` | new clients only: the client's legal name, which attaches the Cox MSA v2.0 as Part B (one signature signs both) |
+| `msa_date` | a client who already signed the Cox MSA v2.0: the date they signed it |
+| `legacy_amendment` | a client on the earlier combined agreement: the article to amend (`"4.6"`). Adds the v2.0 reimbursable amendment (subs cost +20%, other +15%, IRS mileage) going forward, and Section 3.2 cites it. Without it a legacy client stays on its old terms |
+| `reimbursables` | optional override of the standard Section 3.2 Reimbursable expenses text |
 | optional | `scope_note`, `optional_note` [paragraphs], `additional` `{text, rows [[service, when it applies, charge]]}` |
 
 No internal hours, rates or cost floors (T&M quotes the client's hourly rate only). Worked examples:
