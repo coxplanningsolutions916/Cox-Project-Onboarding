@@ -94,5 +94,11 @@ No internal hours, rates or cost floors (T&M quotes the client's hourly rate onl
    with the payment options, and creates the invoice task. `deal-onboarding` takes it from there
    (`onboard_from_deal.py` copies these same services into the project budget).
 
+**Expiry.** A proposal is open for 30 days from the day Cox signs it (`draft_proposal(..., valid_days=N)` to change
+that). The client page shows the date; three days before, the morning routine drafts the last reminder; after it, the
+client can't sign. The dashboard closes a quiet expired proposal by itself (deal Lost, card Closed Lost) and holds one the
+client read in the last two weeks for Chris (EXPIRED on the deal watch). `extend_proposal` (reopens an expired one) and
+`close_proposal` only when Chris says.
+
 Do not move these stages by hand and do not send through Automator's proposal builder, Productive's proposal
 template or SignNow.
