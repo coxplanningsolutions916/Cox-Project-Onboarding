@@ -15,7 +15,7 @@ The sales→delivery bridge. Downstream of `proposal-scoping` (which built the e
 ## Stage 0 — Restore state & confirm the deal is real
 
 1. Read the deal's **`00_Deal_Registry.md`** at the top of `Sales/Proposals/[Lead]/` (Google Drive MCP) and the **approved proposal** in that folder. Pull: client legal entity + contact/email, project name, property/APN, the scoped **services** (the estimate), the **contract value**, and the **payment terms** (down-payment %, milestones, or T&M/monthly).
-2. Confirm the deal is actually **approved/Won** (signed proposal, or Automator card in Closed Won). If it's not, stop and say so — do not onboard an unapproved deal.
+2. Confirm the deal is actually **approved/Won** (signed proposal, or Automator card in Closed Won). A proposal signed on the Cox dashboard sets both itself — Automator Closed Won and the Productive deal Won — and `get_proposal(key, id)` shows the signatures. If it's not, stop and say so — do not onboard an unapproved deal.
 3. If a **paid-findings deposit** was collected (see `paid-findings-report`), note the amount to **credit** against the down payment.
 
 ## Stage 1 — Create the Productive project + budget, copy the services

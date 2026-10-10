@@ -55,42 +55,44 @@ the sync would overwrite it anyway). Productive stores `deal_value` in **cents**
 `1000000`); this is why the value is driven from Automator dollars through the sync, not typed into
 Productive. Automator and Productive must agree, and setting it in the one place keeps them that way.
 
-## 4. Generate the branded proposal
+## 4. Build the proposal content from the services
 
-Read the services (`list_services`) and render the four-section Cox proposal. **Follow the
-`cox-document-formatting` brand rules** (Navy `#1B2A6B`, Gold `#F5A623`, Arial; ranges not points; no
-guaranteed outcomes; no internal hours/rates; no exclamation marks; specific regulatory citations).
+The proposal is a **task order on the Cox dashboard**, built from a content dict (the same shape as the
+entitlement model's `projects/<key>/task_order_N.py`). The dashboard turns it into the Cox Word layout
+(Ubuntu, navy/orange Cox Design System) and the signing page, so you write content, not layout.
 
-**Structure (the only four sections):**
-1. **Introduction** — the scoped intro in Chris's voice (the "why this step, what it decides" framing).
-2. **Scope of Work** — the services grouped by phase; each shows the deliverable name, a 1–3 sentence
-   description, and its fee. Include any title-report / client-provided-item notes.
-3. **Timeline** — phase-level, range-based; name what is outside Cox's control (agency response times).
-4. **Investment** — the fee table (each deliverable + fee → Cox Professional subtotal; pass-through line
-   shown separately; Total Fixed Fee), the pass-through credit/excess note (Article 4.6), and the
-   **payment schedule** (fixed fee defaults 40/40/20). End with the standard non-guarantee sentence and
-   the **Authorization / signature block** (Consultant: Chris Cox / Cox Planning Solutions; Client: the
-   legal entity + authorized representative).
+| Content key | From |
+|---|---|
+| `number`, `subtitle` | the task-order number for this client ("1" for a new client) and a one-line title with the site |
+| `meta` | `[["Client", ...], ["Attention", ...], ["Project", "<site, city>"], ["Services agreement", "Signed <date>"]` (existing client) or `["Agreement", "Master Services Agreement attached (Part B)"]` (new client), `["Billing type", ...], ["Prepared by", "Chris Cox, CEO / Principal Planner, Cox Planning Solutions"], ["Date", "<Month D, YYYY>"]]` |
+| `intro` | two or three paragraphs: why this step, what it decides |
+| `lines` | one per service: `{"code": "1.1", "name": <deliverable>, "scope": <1–3 sentences>, "fee": "$X,XXX"}`; pass-through lines plainly named |
+| `total` | the services total, e.g. `"$16,950"` (add "(estimate)" for T&M) |
+| `billing` (+ `milestones`) | the payment terms in words; milestones `[["Payment 1", "On signing", "$6,780"], ...]` (fixed fee defaults 40/40/20) |
+| `schedule` | `[["<milestone>", "<target>"], ...]`, ranges; name what is outside Cox's control |
+| `assumptions`, `exclusions` | one paragraph each; specific, never "assist with" |
+| `agreement` | the governing agreement sentence (existing client: the services agreement by date; new client: "This task order and the Master Services Agreement in Part B are signed together.") |
+| `msa_for` | new clients only: the client's legal name, which attaches the MSA as Part B (one signature signs both) |
+| optional | `scope_note`, `optional_note` [paragraphs], `additional` `{text, rows [[service, when it applies, charge]]}` |
 
-**Template.** A working Cox-branded HTML proposal (masthead, meta strip, the four sections, deliverable
-cards, investment table, payment cards, signature block) is the canonical layout — navy masthead with a
-gold accent rule, uppercase navy section labels, tabular-aligned fees, committed to the light "paper"
-look. Reuse that HTML skeleton and swap the content from the services. Save the output for Chris's review
-before it goes to the client.
+No internal hours, rates or cost floors (T&M quotes the client's hourly rate only). Worked examples:
+`cox-entitlement-model/projects/tapscott-grand-view/task_order_2.py` (T&M with a retainer, existing client) and
+`projects/7481-walnut/task_order_1.py` (fixed fee 40/40/20, new client + MSA).
 
-## 5. Deliver the proposal + advance the pipeline
+## 5. Draft, release, sign — the pipeline moves itself
 
-**Interim (current, until SignNow Site License is active).** The generated proposal is the **handoff
-Chris uses to populate the Automator proposal manually**. Give him the four-section content paste-ready
-(deliverables + descriptions + fees, timeline, payment schedule) plus the branded HTML for reference.
-Do NOT send via Productive — its proposal template is invoice-like and was set aside. On Chris's approval
-he sends from Automator and advances the opportunity to **Proposal Sent**
-(`update_opportunity(stage="Proposal Sent")`).
+1. `draft_proposal(key, agreement_id, content, deal_id=<sales deal>, payment={amount, label, note})` — `key` is
+   the project's dashboard key (the model profile key when one exists, otherwise a short slug of the site);
+   `agreement_id` is `to<N>` (`co<N>` for a change order). It links the deal, its Automator card and the signer,
+   creates the signature-record task, saves the draft and moves the Productive deal to **Proposal Prep**.
+2. Chris reviews at `team_preview`; revise with the same call. `release_problems` lists what blocks release
+   (placeholders, a missing signer email / Automator contact, the signature task, the deal or the card).
+3. Chris releases (button on the preview, or `release_proposal` when he says) and **signs for Cox** — the
+   client's link opens and the dashboard sets Automator **Proposal Sent** + Productive **Client Approval**.
+4. Draft the client invitation (Gmail draft reply in the client's thread) with `get_proposal(...).client_link`.
+5. The client signs — the dashboard sets Automator **Closed Won** + Productive **Won**, sends the confirmation
+   with the payment options, and creates the invoice task. `deal-onboarding` takes it from there
+   (`onboard_from_deal.py` copies these same services into the project budget).
 
-**Target (once the SignNow MCP connector is live).** The same generated proposal (rendered to branded
-PDF from the Productive services) goes out for signature **directly through SignNow** — no manual
-Automator paste. The signed-webhook flips the opportunity to Won, drafts the down-payment invoice, and
-triggers onboarding. Until then, Automator remains the send + e-sign channel.
-
-Either way, on signature → the opportunity is marked **Won**, which flows into onboarding
-(`onboard_from_deal.py` copies these same services into the project budget).
+Do not move these stages by hand and do not send through Automator's proposal builder, Productive's proposal
+template or SignNow.

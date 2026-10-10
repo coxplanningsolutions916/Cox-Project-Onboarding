@@ -30,6 +30,11 @@ Cowork can write some of the deal card directly and some only indirectly — kno
   Productive deal via `add_service(deal_id, …)` — that IS the estimate (see
   `proposal-generation.md`). Set the Automator `monetary_value` = the services total so the
   two systems agree and the sync doesn't fight you.
+- **The Cox dashboard sends the proposal and moves the stages from there on.** `draft_proposal`
+  (cox-productive MCP) puts the draft on the dashboard and sets the Productive deal to Proposal Prep;
+  Cox's signature sets Automator Proposal Sent + Productive Client Approval; the client's signature
+  sets Automator Closed Won + Productive Won. Don't set those stages by hand
+  (`proposal-scoping` → `references/proposal-generation.md` §5).
 - **The GD proposal folder holds the durable registry note** (below) — the one artifact a
   human reads to know the whole story.
 
@@ -54,8 +59,8 @@ the intake skill). Created at intake, appended at every step, via the Google Dri
 - YYYY-MM-DD  intake screened — <one line: what the go/no-go looked like>
 - YYYY-MM-DD  scope drafted — <n> deliverables; see 02_Scope
 - YYYY-MM-DD  budget set — fee $<amount> (fee backup: <file>), margin <n>%
-- YYYY-MM-DD  proposal generated — <file / artifact>
-- YYYY-MM-DD  proposal sent (Automator) — stage → Proposal Sent
+- YYYY-MM-DD  proposal drafted (dashboard) — <key>/<id> v<n>
+- YYYY-MM-DD  proposal sent (dashboard) — Cox signed, client link sent
 - YYYY-MM-DD  signed / won — onboarding handed off
 ```
 
@@ -69,7 +74,8 @@ what happened when.
    `list_opportunities`/`get_opportunity` + `list_services`) so you restore state instead of
    re-deriving or duplicating it.
 2. **Act.** Do the intake step or the scope/budget step.
-3. **Write the card.** Update the Automator opp (`update_opportunity` — value, stage, contact).
+3. **Write the card.** Update the Automator opp (`update_opportunity` — value, contact; the stage
+   only up to Prepare Proposal — the dashboard moves it once the proposal goes out).
    Write/refresh services on the Productive deal if the estimate changed.
 4. **Append the log.** Add a dated one-line entry to `00_Deal_Registry.md`.
 
