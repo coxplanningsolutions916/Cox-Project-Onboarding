@@ -20,7 +20,7 @@ Exact role names — no abbreviations or variations. Analyst tiers match planner
 | Associate Analyst | $125/hr |
 | Project Coordinator | $125/hr |
 
-Market adjustments (e.g., Florida ~15.5% below California) and the 20% Preferred Partner discount apply only when Chris directs. Reimbursables (Cox MSA v2.0 Section 4.5 and Task Order Section 3.2, effective October 9, 2026): subconsultant services at cost +20%; laboratory, printing and other reimbursable costs at cost +15%; mileage at the current IRS rate. A client still on the earlier combined agreement (Article 4.6, everything at cost +15%) moves to these rates only by signing a task order that carries the reimbursable amendment (`legacy_amendment`).
+Market adjustments (e.g., Florida ~15.5% below California) and the 20% Preferred Partner discount apply only when Chris directs. Reimbursables (Cox MSA v2.0 Section 4.5 and Task Order Section 3.2, effective October 9, 2026): subconsultant services at cost +20%; laboratory, printing and other reimbursable costs at cost +15%; mileage at the current IRS rate. A client still on the earlier combined agreement (Article 4.6, everything at cost +15%; Cox has always billed reimbursables, so never say otherwise) moves to these rates by signing their next task order, which carries the MSA v2.0 as Part B (`msa_for`, Chris 12 Oct 2026).
 
 ## The cost floor is not MSRP
 

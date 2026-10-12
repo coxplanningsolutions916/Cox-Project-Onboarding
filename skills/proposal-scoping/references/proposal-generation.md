@@ -74,7 +74,8 @@ entitlement model's `projects/<key>/task_order_N.py`). The dashboard turns it in
 | `agreement` | the governing agreement sentence. Required for a legacy client (the services agreement by date); optional with `msa_for` / `msa_date`, where the form writes one citing Cox MSA v2.0 |
 | `msa_for` | new clients only: the client's legal name, which attaches the Cox MSA v2.0 as Part B (one signature signs both) |
 | `msa_date` | a client who already signed the Cox MSA v2.0: the date they signed it |
-| `legacy_amendment` | a client on the earlier combined agreement: the article to amend (`"4.6"`). Adds the v2.0 reimbursable amendment (subs cost +20%, other +15%, IRS mileage) going forward, and Section 3.2 cites it. Without it a legacy client stays on its old terms |
+| `msa_for` (legacy client) | a client still on the earlier combined agreement (e.g. Monte Vista): use `msa_for` with their legal name on their next task order, so it carries the Cox MSA v2.0 as Part B (Chris, 12 Oct 2026). After they sign they are an MSA client (`msa_date`) |
+| `legacy_amendment` | only for task orders already drafted that way: the article of the earlier agreement to amend (`"4.6"`), adding the v2.0 reimbursable amendment. New task orders for legacy clients use `msa_for` instead |
 | `reimbursables` | optional override of the standard Section 3.2 Reimbursable expenses text |
 | `signing_options` | `[{id, label, scope, fee, billing}]`: options the client can choose with an Include checkbox in the signing box (e.g. a survey the client asked about). The choice is recorded with the signature and a chosen option creates a task to add it to the budget |
 | optional | `scope_note`, `optional_note` [paragraphs], `additional` `{text, rows [[service, when it applies, charge]]}` |
