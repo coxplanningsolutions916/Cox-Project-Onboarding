@@ -29,4 +29,4 @@ Draft the onboarding invoice per the proposal's payment terms. Same rail as ever
 
 ## QBO phase service item ids (as of 2026-08)
 
-`00 Project Management`=71 · `01 Assessment`=85 · `02 Design`=81 · `03 Planning`=84 · `04 Permits`=83 · `05 Compliance`=82 · generic `Service`=54 · `Expenses`=78. (Confirm via `qbo_catalog_search_products` if unsure.)
+`00 Project Management`=71 · `01 Assessment`=85 · `02 Design`=81 · `03 Planning`=84 · `04 Permits`=83 · `05 Compliance`=82 · generic `Service`=54 · `Expenses`=78. (Confirm via `qbo_catalog_search_products` if unsure.) New projects use the Q1–Q5 questions (2026-10-13); once Kristin adds the `Q1 Screening` … `Q5 Compliance` items, use those. Until then map Q1/Q2 → `01 Assessment`, Q3 → `03 Planning`, Q4 → `04 Permits`, Q5 → `05 Compliance`.

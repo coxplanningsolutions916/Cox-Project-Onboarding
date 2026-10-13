@@ -26,7 +26,7 @@ A change order modifies an existing Task Order rather than creating a new agreem
 ## Sequence
 
 1. Confirm the active Task Order being modified and its current fee/NTE.
-2. Define the change: added deliverables (with `Phase.Deliverable` codes), removed deliverables, and the net fee delta.
+2. Define the change: added deliverables (with the project's own codes: step codes such as `2A.1` on projects set up on the Q1–Q5 ladder since 2026-10-13, `Phase.Deliverable` such as `1.1` on older projects), removed deliverables, and the net fee delta.
 3. **Ground the estimate in actuals, then in the basis (the estimate engine).**
    - Run `cox-productive-tools/co_actuals.py <project_id> --rate <blended>` to pull approved-budget
      vs. worked hours per deliverable. Separate **already-incurred overage** (worked > budget — sunk

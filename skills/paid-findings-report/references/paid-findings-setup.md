@@ -9,7 +9,7 @@ The exact tool sequence to stand a paying lead up as a client and get the deposi
 3. **Create the two budgets** (both on the project):
    - `create_budget(project_id, company_id, name="T.O. 1 — Paid Initial Findings (<subject>)")`
    - `create_budget(project_id, company_id, name="T.O. 2 — <follow-on work> (SOW — TBD; $<amount> credit applies)")`
-4. **Add the deposit deliverable** to T.O. 1: `add_service(deal_id=<T.O.1 id>, name="Initial Findings Report — <subject> (<address>)", price=<500|1000>, phase="01 Assessment")`. If you tracked an hours basis, pass `estimated_hours=` — never put hours in the name.
+4. **Add the deposit deliverable** to T.O. 1: `add_service(deal_id=<T.O.1 id>, name="Initial Findings Report — <subject> (<address>)", price=<500|1000>, phase="Q1 Screening")`. If you tracked an hours basis, pass `estimated_hours=` — never put hours in the name.
 
 > **If `create_project` or `create_budget` returns HTTP 422** for a missing `project_type_id` / `date` (older MCP build not yet redeployed), fall back to the direct Productive API in `~/code/cox-productive-tools` (`.venv/bin/python`, `import productive_client as pc`): POST `/projects` with `attributes.project_type_id: 2` + relationships company / workflow `60022` / project_manager `1218809`; POST `/deals` with `budget:true, deal_type_id:2, date:<today>, currency:"USD"` + relationships company / project / responsible `1218809` / subsidiary `59749`. The patched MCP supplies these itself.
 

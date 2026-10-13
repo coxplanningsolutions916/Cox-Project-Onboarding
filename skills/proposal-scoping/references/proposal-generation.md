@@ -19,12 +19,14 @@ sync has not created the deal — run/await it, then record the id.
 For every scoped deliverable, one `add_service` call:
 
 ```
-add_service(deal_id=<deal>, name="1.1 Regulatory Confirmation & Density Analysis",
-            price=2300, phase="01 Assessment", estimated_hours=14)
+add_service(deal_id=<deal>, name="1C.1 Regulatory Confirmation & Density Analysis",
+            price=2300, phase="Q1 Screening", estimated_hours=14)
 ```
 
-- **name** starts with the `Phase.Deliverable` code (`1.1`, `2.1`, `3.2`) so billing/onboarding can
-  match it later. Keep the client-facing deliverable name.
+- **name** starts with the step code and a deliverable number (`2A.1`, `2B.1`, `4F.2`), the Development
+  Decision Ladder step it belongs to (Chris, 2026-10-13), so billing/onboarding can match it later. Keep the
+  client-facing deliverable name. (Change orders on a LIVE project that still uses 01–05 keep that project's
+  `Phase.Deliverable` codes, `1.1`, `2.1`, and its old phase names.)
 - **price** is the proposed fee in **dollars** (not cents).
 - **estimated_hours** is the hours basis behind the fee (from `estimating-basis.md` + judgment). It
   lands in the service's estimated-hours field — the correct home for the estimate. **Never type
@@ -32,13 +34,21 @@ add_service(deal_id=<deal>, name="1.1 Regulatory Confirmation & Density Analysis
   `update_service_price(service_id, estimated_hours=<h>)` (price and hours are independent — pass
   only what you're changing). Rates come from each person's rate card; never add a person as a
   service line.
-- **phase** is one of the phase names below (maps to its service type):
+- **phase** is the question the deliverable answers (maps to its service type; `add_service` then picks the
+  deliverable-level type, e.g. `2A · Wetland Delineation`, from the service name):
 
-  | phase name | service_type_id | | phase name | service_type_id |
-  |---|---|---|---|---|
-  | `00 Project Management` | 440153 | | `03 Planning` | 440156 |
-  | `01 Assessment` | 440154 | | `04 Permits` | 440157 |
-  | `02 Design` | 440155 | | `05 Compliance` | 440158 |
+  | phase (new work) | steps | service_type_id |
+  |---|---|---|
+  | `00 Project Management` | coordination, QA/QC, risk register, schedule tracker | 440153 |
+  | `Q1 Screening` (should I proceed?) | 1A Screen, 1B Map, 1C Scenarios (permit analysis, highest & best use, market) | 468267 |
+  | `Q2 Underwrite` (which path?) | 2A Field Verification (surveys), 2B Site Plan & Alternatives, 2C Massing & Alternatives, 2D Feasibility Analysis | 468268 |
+  | `Q3 Pre-Approval` (will the agency approve it?) | 3A Pre-Application Package, 3B Agency Review, 3C Approval Strategy | 468269 |
+  | `Q4 Permitting` (how do I get permits?) | 4A Design & Engineering, 4B Technical Studies, 4C Application Package, 4D CEQA / NEPA, 4E Entitlement Approval, 4F Environmental Permits, 4G Construction Documents, 4H Grading & Building Permits | 468270 |
+  | `Q5 Compliance` (how do I stay compliant?) | 5A Compliance Plan, 5B Construction Monitoring, 5C Closeout, 5D Long-term Monitoring & Reporting | 468271 |
+
+  The old phases (`01 Assessment` 440154, `02 Design` 440155, `03 Planning` 440156, `04 Permits` 440157,
+  `05 Compliance` 440158) are only for change orders on live projects that still use them. The full old→new
+  map of every deliverable type is `cox-productive-tools/phase_map.json`.
 
 - **Pass-through / agency-fee lines** (County filing fees, etc.): add as a service too, named plainly
   with `pass-through` in it, e.g. `"R Pre-Application Filing Fee — LA County (pass-through)"`. Put it

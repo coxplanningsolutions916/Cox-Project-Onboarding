@@ -35,7 +35,7 @@ Run the setup in `references/paid-findings-setup.md`. In short: **company → pr
 
 - **Company** = the legal/vesting entity.
 - **Project** = `<Client short name> – <Project> (<address>)`.
-- **T.O. 1 — Paid Initial Findings** budget, with one service = the findings deliverable at the tier price under the `01 Assessment` phase.
+- **T.O. 1 — Paid Initial Findings** budget, with one service = the findings deliverable at the tier price under the `Q1 Screening` phase.
 - **T.O. 2 — <follow-on work> (SOW — TBD; $ credit applies)** placeholder budget, where the deposit credits when the real scope is built.
 
 ## Stage 3 — Invoice with a pay link (QBO)
