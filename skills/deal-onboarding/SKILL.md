@@ -5,6 +5,28 @@ description: "Onboard an approved/won Cox Planning Solutions deal — take a dea
 
 # Deal Onboarding (approved proposal → project + down-payment invoice)
 
+## First: is the proposal on the dashboard? Then onboarding happens there (16 Oct 2026)
+
+Run `list_proposals`. If the signed proposal is there, **do not build the project or the invoice with the steps below.**
+A client's signature on the dashboard moves the deal to **Onboarding** on both boards (Productive "Onboarding", Automator
+"Onboarding") and the proposal into the Onboarding column, with a plan built from the signed agreement. One path:
+
+1. `onboarding_status(key, id)` — show Chris the plan: project (new, or a new budget on the client's project), the budget
+   lines from the signed agreement, the down-payment invoice from the payment due on signing, and any warnings (e.g. a
+   Productive company named "LANDSCAPING DL": QuickBooks takes the customer name from it).
+2. Chris presses **Approve and set up** on the card, or tells you to: `start_onboarding(key, id, project, project_name,
+   company_name)`. It creates the project/budget/services/task lists, adds Chris, Kristin and Financials, drafts the
+   down-payment invoice **in Productive** on the budget, gives **Kristin** a task to issue it and push it to QuickBooks
+   (the Invoice Sender then sends it with the dashboard link), and registers the project on the dashboard under the
+   proposal's key (the nightly refresh adds it to the billing crosswalk).
+3. Work the checklist with `tick_onboarding`: team, slack / drive / claude (with the link), client_link, kickoff. The
+   invoice items (issued and pushed, sent, paid) tick themselves; `mark_proposal_paid` only for Zelle/check.
+4. The last item moves the deal to **Won** on both boards and the proposal to Active. Also append the
+   `00_Deal_Registry.md` log (project/budget ids, invoice #).
+
+A proposal set up before this existed is marked "Already set up by hand" on its card. **The rest of this skill is only for
+a deal won outside the dashboard** (no dashboard proposal).
+
 The sales→delivery bridge. Downstream of `proposal-scoping` (which built the estimate as **services on the Productive sales deal** and produced the proposal) and, when relevant, `paid-findings-report` (which may have collected a credited deposit). This skill converts an **approved/won** deal into a **live billable project** and drafts the **down-payment invoice** — then you approve and it sends.
 
 **Non-negotiables:**
@@ -15,7 +37,7 @@ The sales→delivery bridge. Downstream of `proposal-scoping` (which built the e
 ## Stage 0 — Restore state & confirm the deal is real
 
 1. Read the deal's **`00_Deal_Registry.md`** at the top of `Sales/Proposals/[Lead]/` (Google Drive MCP) and the **approved proposal** in that folder. Pull: client legal entity + contact/email, project name, property/APN, the scoped **services** (the estimate), the **contract value**, and the **payment terms** (down-payment %, milestones, or T&M/monthly).
-2. Confirm the deal is actually **approved/Won** (signed proposal, or Automator card in Closed Won). A proposal signed on the Cox dashboard sets both itself — Automator Closed Won and the Productive deal Won — and `get_proposal(key, id)` shows the signatures. If it's not, stop and say so — do not onboard an unapproved deal.
+2. Confirm the deal is actually **approved/Won** (signed proposal, or Automator card in Closed Won). If it's not, stop and say so — do not onboard an unapproved deal. (A proposal signed on the dashboard is onboarded there: see the top of this skill.)
 3. If a **paid-findings deposit** was collected (see `paid-findings-report`), note the amount to **credit** against the down payment.
 
 ## Stage 1 — Create the Productive project + budget, copy the services
@@ -69,7 +91,7 @@ itself from there. Hand the client its link once the first invoice goes out.
 
 ## Stage 2 — Draft the down-payment invoice (per the proposal's terms)
 
-Read the payment terms from Stage 0 and follow them — they govern. Then create the invoice as a **draft** (see `references/down-payment-invoice.md` for the exact QBO tool sequence):
+Read the payment terms from Stage 0 and follow them — they govern. Then create the invoice as a **draft in Productive** on the new budget — `create_draft_invoice(company_id, subject, invoiced_on, lines, budget_id)` — never directly in QuickBooks: Productive is the truth for invoiced, and a QuickBooks-only invoice is a second invoice path, which risks billing the down payment twice. Then a task for **Kristin** (person 1339861) in Operations › Agreements for signature to issue it and push it to QuickBooks. (`references/down-payment-invoice.md` keeps the QBO details for reference: phase items, payment memo, no business payment methods.)
 
 - **Fixed-fee, terms unspecified →** default **40% of contract** down at onboarding.
 - **Fixed-fee with a stated schedule →** use the proposal's schedule (e.g., 50/50, milestone splits).
@@ -85,7 +107,7 @@ Present a single summary for review:
 - **Payment terms as read from the proposal** — call these out explicitly for confirmation (this is the "review closely" step)
 - The drafted down-payment invoice: amount, % of contract, any deposit credit, due date — **unsent**
 
-On your **explicit go-ahead**, send it: `qbo_sales_send_invoice(invoice_id, customer, reference_number, delivery_info={delivery_address:<client email>})`. Never before.
+On your **explicit go-ahead**, Kristin issues it in Productive and pushes it to QuickBooks; the invoice watch packages it and the Cox Invoice Sender routine sends it from QuickBooks with the client's dashboard link. Never send before the go-ahead.
 
 ## Stage 4 — Advance the pipeline
 
