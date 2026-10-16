@@ -18,8 +18,12 @@ A client's signature on the dashboard moves the deal to **Onboarding** on both b
    company_name)`. It creates the project/budget/services/task lists, adds Chris, Kristin and Financials, drafts the
    down-payment invoice **in Productive** on the budget, gives **Kristin** a task to issue it and push it to QuickBooks
    (the Invoice Sender then sends it with the dashboard link), and registers the project on the dashboard under the
-   proposal's key (the nightly refresh adds it to the billing crosswalk).
-3. Work the checklist with `tick_onboarding`: team, slack / drive / claude (with the link), client_link, kickoff. The
+   proposal's key (the nightly refresh adds it to the billing crosswalk). It also renames the Productive company to the
+   client's company in **Automator (the CRM, the source of truth)**, sets up or updates the client's **portal profile**
+   (account role active_client, the project's site linked; terms left for them, nothing emailed), and makes the signer
+   the invoice recipient so the first invoice isn't held.
+3. Work the checklist with `tick_onboarding`: team, slack / drive / claude (with the link), client_link (the portal
+   and dashboard link sent to the client), kickoff; `portal` / `billing_contact` re-run those steps if they failed. The
    invoice items (issued and pushed, sent, paid) tick themselves; `mark_proposal_paid` only for Zelle/check.
 4. The last item moves the deal to **Won** on both boards and the proposal to Active. Also append the
    `00_Deal_Registry.md` log (project/budget ids, invoice #).
