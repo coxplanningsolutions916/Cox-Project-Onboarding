@@ -79,6 +79,9 @@ Using the zoning and General Plan base from 5.1, scan for **California reform-la
 
 This is an **initial flag, not the paid analysis.** The defensible lever analysis is a Step 1b ISR deliverable. Here, the purpose is to surface which pathways plausibly apply so they can be positioned as scope in the findings email — the lever flag is what sells the ISR. Frame levers as candidates to confirm, cite the governing code, and note the obvious disqualifiers. Do not overstate yield or present a pathway as secured.
 
+### 5.5 Seed the draft Roadmap
+Record what the screen found in the Cox Entitlement Model as the project's draft Roadmap (facts, assumptions and a first deficiencies.yaml: what the prospect wants against what the code allows). Every prospect gets a draft Roadmap in the Cox Entitlement Model before Task Order 1 goes out (Chris, 2026-10-25), whether or not they buy a Roadmap. The findings email draws its discussion points from those deficiencies, and proposal-scoping (A2) builds Task Order 1 on them. A lost lead keeps its record (`status: lost`): it is still a data point and a regulation review.
+
 ## Stage 6 — Draft the findings email
 
 Produce a lead-with-value email that takes the prospect's temperature. Three parts:

@@ -9,6 +9,9 @@ The Roadmap is the front door of the Development Decision Ladder. A prospect giv
 
 Decided Sept 30, 2026: one product at one price, sized by scope rather than discount. Full pricing and the scale test in `references/scale-test-and-pricing.md`. The memo structure, proven on Lemon Hill (Sept 15, 2026) and Riego Rd (Sept 21, 2026), is in `references/roadmap-memo-template.md`. The systems sequence (Automator, Productive, QuickBooks, Drive) is in `references/roadmap-setup.md`. The senior planner's review gate is `references/qc-checklist.md`.
 
+## A draft Roadmap for every prospect (Chris, 2026-10-25)
+Every prospect gets a draft Roadmap in the Cox Entitlement Model before Task Order 1 goes out (Chris, 2026-10-25), whether or not they buy a Roadmap. The paid Roadmap is the client-facing product; the draft is Cox's own working record and stays internal until a planner releases it. Lead it with the deficiencies list (`engine/deficiencies.py`): it guides Task Order 1, gives the discussion points for the client call, and sets up the later task orders. Lost prospects keep their record (`status: lost`) as data for the model.
+
 ## The offer
 
 | Rung | Price | What the client gets | Who buys it |
