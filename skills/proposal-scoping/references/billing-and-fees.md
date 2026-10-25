@@ -30,7 +30,20 @@ Use the real cash-cost basis when known. Example from the screening-tool build: 
 
 ## Three billing types
 
-**Fixed Fee (default).** Set per deliverable in advance; internal hours tracked but not billed. Requires proposed fee ≥ estimated cost. Standard schedule 40/40/20. Use for defined-deliverable scopes.
+**Fixed Fee (default).** Set per deliverable in advance; internal hours tracked but not billed. Requires proposed fee ≥ estimated cost. Payment terms follow the size of the job (below). Use for defined-deliverable scopes.
+
+## Payment terms (Chris, 2026-10-25; replaces the 40/40/20 default)
+
+Measure the job by its **strategy and documentation** fees (studies, reports, plans, applications Cox prepares), not counting application processing.
+
+- **Small jobs — strategy and documentation under $20,000.**
+  - Documentation: **50 percent on signing, 50 percent when the drafts go to the client** (not on final or approval).
+  - Application processing (submittal, agency coordination, comment responses, hearings, inspections): a **processing retainer** in the task order, **billed monthly by percent complete against the retainer**, never held until approval. The task order names the retainer amount and says unused retainer is not billed.
+- **Larger jobs — strategy and documentation of $20,000 or more.**
+  - A **down payment equal to the estimated first month of effort** (month-one hours by role × rate from the schedule, rounded), due on signing and credited against the first monthly invoice(s).
+  - Then **monthly by percent complete** on each deliverable, processing included.
+- Credit any paid-findings deposit against the first payment. T&M NTE, subscription and public-agency monthly terms are unchanged.
+- Worked example: 2437-california Task Order 2 ($13,100 documentation → 50/50; $5,400 processing retainer → monthly percent complete).
 
 **T&M NTE.** Billed monthly on actual hours to a not-to-exceed ceiling; 30-day terms, 1% monthly late fee, ~10% contingency held in reserve. Use for agency-driven, iterative, multi-year, or public-agency work where fixed fees are hard to defend.
 

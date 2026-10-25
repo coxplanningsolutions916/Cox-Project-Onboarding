@@ -78,7 +78,7 @@ entitlement model's `projects/<key>/task_order_N.py`). The dashboard turns it in
 | `intro` | two or three paragraphs: why this step, what it decides |
 | `lines` | one per service: `{"code": "1.1", "name": <deliverable>, "scope": <1–3 sentences>, "fee": "$X,XXX"}`; pass-through lines plainly named |
 | `total` | the services total, e.g. `"$16,950"` (add "(estimate)" for T&M) |
-| `billing` (+ `milestones`) | the payment terms in words; milestones `[["Payment 1", "On signing", "$6,780"], ...]` (fixed fee defaults 40/40/20) |
+| `billing` (+ `milestones`) | the payment terms in words; milestones `[["Payment 1", "On signing", "$6,780"], ...]` (terms by job size, `billing-and-fees.md` Payment terms: under $20,000 of documentation, 50 percent on signing / 50 percent at drafts plus a processing retainer billed monthly by percent complete; $20,000 or more, a first-month down payment then monthly percent complete) |
 | `schedule` | `[["<milestone>", "<target>"], ...]`, ranges; name what is outside Cox's control |
 | `assumptions`, `exclusions` | one paragraph each; specific, never "assist with" |
 | `agreement` | the governing agreement sentence. Required for a legacy client (the services agreement by date); optional with `msa_for` / `msa_date`, where the form writes one citing Cox MSA v2.0 |
@@ -92,7 +92,7 @@ entitlement model's `projects/<key>/task_order_N.py`). The dashboard turns it in
 
 No internal hours, rates or cost floors (T&M quotes the client's hourly rate only). Worked examples:
 `cox-entitlement-model/projects/tapscott-grand-view/task_order_2.py` (T&M with a retainer, existing client) and
-`projects/7481-walnut/task_order_1.py` (fixed fee 40/40/20, new client + MSA).
+`projects/7481-walnut/task_order_1.py` (fixed fee, new client + MSA; drafted under the old 40/40/20 default).
 
 ## 5. Draft, release, sign — the pipeline moves itself
 

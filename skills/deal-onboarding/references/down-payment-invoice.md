@@ -4,7 +4,7 @@ Draft the onboarding invoice per the proposal's payment terms. Same rail as ever
 
 ## Amount
 
-- **Fixed-fee, unspecified terms:** `round(contract_value * 0.40)` = 40% down.
+- **Fixed-fee, unspecified terms:** small job (documentation under $20,000) = `round(documentation_fees * 0.50)`; larger job = the estimated first month of effort. Older task orders signed on 40/40/20 keep 40%.
 - **Fixed-fee with a schedule in the proposal:** use it (50/50, milestone %, etc.).
 - **T&M NTE / monthly / public-agency:** usually **no** down-payment invoice — first bill is monthly-on-actuals. Create the project; skip this invoice; note monthly billing.
 - **Deposit credit:** if a paid-findings deposit was collected (e.g. $500), add it as a **negative line** so it nets out (e.g., 40% of $10,000 = $4,000, minus $500 credit = $3,500 due).

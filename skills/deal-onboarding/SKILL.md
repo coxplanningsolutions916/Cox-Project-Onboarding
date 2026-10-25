@@ -97,7 +97,7 @@ itself from there. Hand the client its link once the first invoice goes out.
 
 Read the payment terms from Stage 0 and follow them — they govern. Then create the invoice as a **draft in Productive** on the new budget — `create_draft_invoice(company_id, subject, invoiced_on, lines, budget_id)` — never directly in QuickBooks: Productive is the truth for invoiced, and a QuickBooks-only invoice is a second invoice path, which risks billing the down payment twice. Then a task for **Kristin** (person 1339861) in Operations › Agreements for signature to issue it and push it to QuickBooks. (`references/down-payment-invoice.md` keeps the QBO details for reference: phase items, payment memo, no business payment methods.)
 
-- **Fixed-fee, terms unspecified →** default **40% of contract** down at onboarding.
+- **Fixed-fee, terms unspecified →** apply the size rule (proposal-scoping `billing-and-fees.md`, Payment terms): under $20,000 of documentation, **50 percent of the documentation fees** (not the processing retainer); $20,000 or more, **the estimated first month of effort**. Task orders signed under the old default keep their 40/40/20.
 - **Fixed-fee with a stated schedule →** use the proposal's schedule (e.g., 50/50, milestone splits).
 - **T&M NTE / public-agency / monthly (e.g., Panattoni, agencies) →** typically **no down payment** — first invoice is monthly-on-actuals per the terms. If so, create the project but draft **no** down-payment invoice; note that billing is monthly.
 - **Credit any paid-findings deposit** (e.g., a $500 findings fee) as a negative line so it nets against the down payment.
