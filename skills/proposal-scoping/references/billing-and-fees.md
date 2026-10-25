@@ -43,6 +43,16 @@ Measure the job by its **strategy and documentation** fees (studies, reports, pl
   - A **down payment equal to the estimated first month of effort** (month-one hours by role × rate from the schedule, rounded), due on signing and credited against the first monthly invoice(s).
   - Then **monthly by percent complete** on each deliverable, processing included.
 - Credit any paid-findings deposit against the first payment. T&M NTE, subscription and public-agency monthly terms are unchanged.
+- **Quick, small jobs bill 100 percent up front** (Chris, 2026-10-25): a fixed fee under $5,000 delivered within about three weeks (foot-in-the-door offers: paid findings, clearance letters, Snapshots, small Initial Screening Reports, a single permit memo) is due in full on signing, **unless the client has an established track record** (see Payment standing), in which case it bills on delivery.
+- **Security deposits for clients flagged "Deposit required"** (see Payment standing): in addition to the terms above, a deposit equal to about one month of expected billing (at least $1,000; 10 percent of the contract for jobs over $50,000), held and applied to the final invoice, not to the first one. Name it in the task order's billing paragraph as a security deposit.
+
+### Payment standing (who pays up front or a deposit)
+
+Each client carries a Payment standing: **Established**, **New** or **Deposit required**.
+- **Established:** at least two invoices paid within terms in the last 12 months and nothing more than 60 days past due. Standard terms; no up-front or deposit rules.
+- **New:** no payment history with Cox. Quick small jobs are paid up front; other terms as above.
+- **Deposit required:** any invoice more than 60 days past due in the last 12 months, a prior collections or write-off, or an engagement with elevated dispute risk (after-the-fact or enforcement work, an owner-builder or single-asset entity on a job of $20,000 or more, a client who has disputed a scope or fee). Chris can set or clear it by hand with a reason.
+Check the standing before writing the billing paragraph; if it is not recorded yet, ask Chris.
 - Worked example: 2437-california Task Order 2 ($13,100 documentation → 50/50; $5,400 processing retainer → monthly percent complete).
 
 **T&M NTE.** Billed monthly on actual hours to a not-to-exceed ceiling; 30-day terms, 1% monthly late fee, ~10% contingency held in reserve. Use for agency-driven, iterative, multi-year, or public-agency work where fixed fees are hard to defend.
