@@ -80,7 +80,18 @@ Using the zoning and General Plan base from 5.1, scan for **California reform-la
 This is an **initial flag, not the paid analysis.** The defensible lever analysis is a Step 1b ISR deliverable. Here, the purpose is to surface which pathways plausibly apply so they can be positioned as scope in the findings email — the lever flag is what sells the ISR. Frame levers as candidates to confirm, cite the governing code, and note the obvious disqualifiers. Do not overstate yield or present a pathway as secured.
 
 ### 5.5 Seed the draft Roadmap
-Record what the screen found in the Cox Entitlement Model as the project's draft Roadmap (facts, assumptions and a first deficiencies.yaml: what the prospect wants against what the code allows). Every prospect gets a draft Roadmap in the Cox Entitlement Model before Task Order 1 goes out (Chris, 2026-10-25), whether or not they buy a Roadmap. The findings email draws its discussion points from those deficiencies, and proposal-scoping (A2) builds Task Order 1 on them. A lost lead keeps its record (`status: lost`): it is still a data point and a regulation review.
+Every prospect gets a draft Roadmap in the Cox Entitlement Model before Task Order 1 goes out (Chris, 2026-10-25), whether or not they buy a Roadmap. Start it from this session with the cox-productive connector's **`start_draft_roadmap`**; no repo access or Claude Code session is needed.
+
+- **key**: a new lowercase slug, street number and name (`1200-elm-st`). Check the Cox Model connector's `list_projects` first; if the site already has a project, add to it with `propose_update` instead.
+- **name, client, contact, jurisdiction, site, parcels, acres, program**: from the intake and the screen. **links**: the Automator contact and opportunity ids, the Productive deal id, the proposals Drive folder.
+- **facts**: only what a document says, each with its source document, the document's date and a confidence (firm, quoted, published, derived). Anything unverified is an assumption.
+- **assumptions** (statement and reason) and **questions** for Chris.
+- **deficiencies**: what the prospect wants against what the code allows. Each has topic, shown, rule, cites (register ids from the Cox Model connector, or empty), gap, if_unaddressed, and options; each option has path, approval, decided_by, requires, time and cost ranges, an outlook band (strong, moderate, uncertain or difficult, never a percentage), why, and at most one marked recommended.
+- **evidence**: the documents it was built from, with dates.
+
+The tool checks the input and returns any problems to fix before it files; it then returns a change id and waits for a planner at /team/roadmap-changes. Tell the person the draft is waiting for Chris. Once he accepts, the model writes the record and the Roadmap draft panel appears on the dashboard. The findings email draws its discussion points from those deficiencies, and proposal-scoping (A2) builds Task Order 1 on them.
+
+A lost lead keeps its record: call **`mark_roadmap_status(key, "lost", reason, evidence, date)`**. It is still a data point and a regulation review.
 
 ## Stage 6 — Draft the findings email
 
