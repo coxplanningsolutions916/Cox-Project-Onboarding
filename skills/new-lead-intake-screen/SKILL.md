@@ -53,6 +53,8 @@ When the prospect sends background material, file each item by type using the ro
 
 This is the core. Work in order; each layer informs the next.
 
+Every rule cited here comes from the register or an official source (see Guardrails); never from an unofficial copy of the code.
+
 ### 5.1 Zoning and General Plan — do this first
 
 Identify the **zoning designation** and the **General Plan land use designation** for the parcel. These gate everything that follows — density, use, and which regulatory levers are even available. Pull from the jurisdiction's parcel viewer, zoning map, and General Plan land use map; see `references/constraint-sources.md`. State both designations and what each permits.
@@ -138,6 +140,11 @@ append rather than overwrite.
 
 ## Guardrails
 
+- **Regulations: register first, then official sources only** (Chris, 2026-10-27).
+  - Check the Cox Entitlement Model register first (`register_search`, `register_record`, `project_register`).
+  - If the register doesn't cover a rule, read only the official code: American Legal, eCode360, Municode, the jurisdiction's own site, leginfo for State law, eCFR and the Federal Register for federal law. Then file a register request (`propose_update` with kind `record_needed`).
+  - An unofficial copy (gocodebook, casetext, summaries) may help locate a section, but never cite one. Its section numbers can be out of date.
+  - If the official page won't load, mark the finding unverified rather than using a mirror.
 - **Comprehensive by default.** Only throttle to a quick screen if the user asks.
 - **Internal vs. client-facing.** Fee backup, hours, and cost floors stay internal. The email shows clean findings, scope, and a budget range.
 - **No guaranteed outcomes.** Never state or imply approval, timeline certainty, or valuation.

@@ -55,6 +55,11 @@ the log is written. Full convention + note format: `references/deal-registry.md`
 
 ## Guardrails
 
+- **Regulations: register first, then official sources only** (Chris, 2026-10-27).
+  - Check the Cox Entitlement Model register first (`register_search`, `register_record`, `project_register`).
+  - If the register doesn't cover a rule, read only the official code: American Legal, eCode360, Municode, the jurisdiction's own site, leginfo for State law, eCFR and the Federal Register for federal law. Then file a register request (`propose_update` with kind `record_needed`).
+  - An unofficial copy (gocodebook, casetext, summaries) may help locate a section, but never cite one. Its section numbers can be out of date.
+  - If the official page won't load, mark the finding unverified rather than using a mirror.
 - The firm is **Cox**, never "CPS" — including internal project-number prefixes.
 - Brand: Arial, Cox Navy and Cox Gold, no exclamation marks, no buzzwords, specific regulatory citations, range-based estimates with confidence tags.
 - No guaranteed approvals or valuation outcomes. Include the standard non-guarantee in the terms.

@@ -84,6 +84,11 @@ Roadmaps sold per month, the 90-day conversion of Roadmaps to a Step 1 or 2 enga
 
 ## Guardrails
 
+- **Regulations: register first, then official sources only** (Chris, 2026-10-27).
+  - Check the Cox Entitlement Model register first (`register_search`, `register_record`, `project_register`).
+  - If the register doesn't cover a rule, read only the official code: American Legal, eCode360, Municode, the jurisdiction's own site, leginfo for State law, eCFR and the Federal Register for federal law. Then file a register request (`propose_update` with kind `record_needed`).
+  - An unofficial copy (gocodebook, casetext, summaries) may help locate a section, but never cite one. Its section numbers can be out of date.
+  - If the official page won't load, mark the finding unverified rather than using a mirror.
 - **The Roadmap is a desktop planning product, not a scope of work or a fee proposal.** The memo says so in its first paragraph and its Terms.
 - **No Productive writes before the request is paid or Chris approves the exception.** The screen and draft can proceed; the project setup waits.
 - **Owner identity and site information stay inside the engagement.** Marketing reuse of a Roadmap (newsletter, case study) is anonymized and only with the client's consent (the Hillcrest rules from Sept 29, 2026).
