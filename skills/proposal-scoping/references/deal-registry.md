@@ -52,7 +52,7 @@ the intake skill). Created at intake, appended at every step, via the Google Dri
 - Client entity:   <legal entity>          Contact: <name / email / phone>
 - Agent / referrer: <name>                 (if any — e.g. the listing agent)
 - Property / APN:  <address> / <APN>
-- DDL step:        <1a | 1b | 2 | …>
+- DDL step:        <1A Screen | 1B Scenarios | 1C planner level | Q2 … (TO1)>
 - Current stage:   <pipeline stage>         Value: $<amount>
 
 ## Log

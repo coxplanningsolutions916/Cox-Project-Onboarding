@@ -2,6 +2,8 @@
 
 A productized engagement scoped under Mode 1, spanning DDL Step 1a (the subscription screening tool) and Step 1b (per-property ISRs). Illustrates subscription pricing, the marketing-funnel logic, and a fee backup against the real cost floor. Pricing figures here are recommended starting points pending Chris's confirmation, not committed numbers.
 
+> **Historical (May 2026).** The Step 1a subscription tool and the $2,500 / $1,000 Step 1b ISR prices below are retired. Step 1 is now the portal membership (A-Plus's Olga Suprun is the Pro pilot) with the automated Screen and Scenarios read and the paid planner levels, priced by `canon/pilot.yaml` (see roadmap-scoping). Use this example for the subscription and cost-floor reasoning only, never for current prices.
+
 ## A — Engagement type
 
 Client: A-Plus Construction (contact Olga Suprun; CEO oversees property sourcing). The screening tool is **Step 1a** (subscription, Cox-owned, mass-market; A-Plus as the anchor client). Per-property ISRs are **Step 1b** (fixed fee). New Task Order under the existing executed agreement (behind TO-1, the T Street ISR, 2026-05-20).

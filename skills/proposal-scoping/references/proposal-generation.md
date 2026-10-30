@@ -40,7 +40,7 @@ add_service(deal_id=<deal>, name="1C.1 Regulatory Confirmation & Density Analysi
   | phase (new work) | steps | service_type_id |
   |---|---|---|
   | `00 Project Management` | coordination, QA/QC, risk register, schedule tracker | 440153 |
-  | `Q1 Screening` (should I proceed?) | 1A Screen, 1B Map, 1C Scenarios (permit analysis, highest & best use, market) | 468267 |
+  | `Q1 Screening` (should I proceed?) | 1A Screen and 1B Scenarios (automated, from the membership); 1C planner levels: Planner Review, Strategy Session, Site Walk (sold through roadmap-scoping, not task orders) | 468267 |
   | `Q2 Underwrite` (which path?) | 2A Field Verification (surveys), 2B Site Plan & Alternatives, 2C Massing & Alternatives, 2D Feasibility Analysis | 468268 |
   | `Q3 Pre-Approval` (will the agency approve it?) | 3A Pre-Application Package, 3B Agency Review, 3C Approval Strategy | 468269 |
   | `Q4 Permitting` (how do I get permits?) | 4A Design & Engineering, 4B Technical Studies, 4C Application Package, 4D CEQA / NEPA, 4E Entitlement Approval, 4F Environmental Permits, 4G Construction Documents, 4H Grading & Building Permits | 468270 |

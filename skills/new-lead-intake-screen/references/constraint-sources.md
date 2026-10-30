@@ -37,15 +37,15 @@ NWI and CARI are a **required live query**, not optional (SKILL.md Stage 5.3). F
 
 - **NWI (USFWS Wetlands):** `https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0/query`
   Count example: `…/0/query?geometry=<xmin>,<ymin>,<xmax>,<ymax>&geometryType=esriGeometryEnvelope&inSR=4326&returnCountOnly=true&f=json`
-  **Quirk:** returns counts fine but **400s on `outFields`** through the current fetch proxy. If attributes are needed and it keeps 400-ing, record the count and defer classification to the ISR rather than burning retries.
+  **Quirk:** returns counts fine but **400s on `outFields`** through the current fetch proxy. If attributes are needed and it keeps 400-ing, record the count and defer classification to the paid analysis rather than burning retries.
 - **CARI streams (SFEI, ds2836):** `https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/biosds2836_fnu/FeatureServer/0/query`
 - **CARI wetlands (SFEI, ds2835):** `https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/biosds2835_fpu/FeatureServer/0/query`
   These accept `outFields=*` cleanly; useful fields: `name`, `clicklabel`, `major_class`, `CRAM_wetland_type`, `anthropogenic_modifier`. (On the Toor parcel these returned the "McCall Ditch" as an artificial/unnatural drainage.)
 - **FEMA NFHL (cross-check only; Acres carries flood):** `https://hazards.fema.gov/gis/nfhl/rest/services/public/NFHL/MapServer/28/query`
 
-**Reporting rule.** Counts and types from these services are **mapped indicators**, not delineations. On-parcel extent needs the parcel polygon (not just the centroid envelope), and CWA §404 / §401 / CDFW §1602 jurisdiction is a field + ISR determination. Never state a mapped feature as field-confirmed.
+**Reporting rule.** Counts and types from these services are **mapped indicators**, not delineations. On-parcel extent needs the parcel polygon (not just the centroid envelope), and CWA §404 / §401 / CDFW §1602 jurisdiction is a field and paid-analysis determination. Never state a mapped feature as field-confirmed.
 
-**Maps.** Figure-quality NWI/CARI exhibits are a paid ISR deliverable (SKILL.md Stage 5.3); in the screen, record presence, counts, features, centroid/envelope, and URLs to tee up the ISR figure step.
+**Maps.** Figure-quality NWI/CARI exhibits are paid work (SKILL.md Stage 5.3); in the screen, record presence, counts, features, centroid/envelope, and URLs to tee up the figure step.
 
 ## Jurisdiction quick reference — zoning and General Plan
 

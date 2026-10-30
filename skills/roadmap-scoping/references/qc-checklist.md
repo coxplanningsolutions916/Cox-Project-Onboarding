@@ -1,4 +1,6 @@
-# Roadmap QC checklist — the senior planner's gate (inside the Roadmap's four staff hours)
+# Planner-level QC checklist — the planner's gate before anything goes to the client
+
+Applies to the Planner Review, the Strategy Session write-up and the Site Walk notes.
 
 Work top to bottom with the memo and the screen side by side. Any unchecked item blocks the send.
 
@@ -15,7 +17,7 @@ Work top to bottom with the memo and the screen side by side. Any unchecked item
 - [ ] The approval set names the approval body for each action and whether a federal or state permit enters the picture; if one does, the structural consequence (ESA consultation, 401 certification, CEQA pathway shift) is stated (R2).
 - [ ] Field tasks are placed inside their season windows and the schedule says which window governs (R3).
 - [ ] The total to entitlement names its carrying assumption in the same sentence.
-- [ ] The scale test result matches the rung sold; if the screen moved it to Plus, Chris has approved the change before the memo goes out.
+- [ ] Strategy Session: the tier invoiced matches the scale test, or Chris's override and its written reason are on the record; if the screen moved a standard site to complex after payment, Chris has decided how to handle the difference before the memo goes out.
 
 ## Client-facing hygiene
 - [ ] No hours, rates, roles, margin, vendor names, or internal reasoning anywhere in the memo.
@@ -23,7 +25,9 @@ Work top to bottom with the memo and the screen side by side. Any unchecked item
 - [ ] Chris's voice per `cox-document-formatting`: plain words, no dashes as asides, no exclamation marks, no buzzwords; first-person plural.
 - [ ] Owner names, APNs, and site details appear only in the client copy; any marketing reuse is anonymized and consented.
 - [ ] Figures carry their attribution (Google Earth imagery line) and the "desktop review; field screening confirms" caption.
-- [ ] The next step names one proposal and what it resolves from section 8.
+- [ ] The next step names one proposal (usually Task Order 1 at Q2 Underwrite, built from the draft Roadmap's deficiencies) and what it resolves from section 8.
+- [ ] Every price quoted (a later planner level, a credit) matches `canon/pilot.yaml` today; the automated read is called Scenarios and the paid level 2 the Strategy Session.
+- [ ] No approval, timeline or valuation guarantee; ranges, not points; "Cox", never "CPS".
 
 ## Stop and escalate
 - [ ] Anything touching the Clean Water Act 404(f) agricultural exemption, or any wording that could read as concealing a resource from an agency: stop; Chris decides.

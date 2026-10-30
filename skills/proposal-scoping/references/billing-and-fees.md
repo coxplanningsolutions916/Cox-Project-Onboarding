@@ -42,8 +42,8 @@ Measure the job by its **strategy and documentation** fees (studies, reports, pl
 - **Larger jobs — strategy and documentation of $20,000 or more.**
   - A **down payment equal to the estimated first month of effort** (month-one hours by role × rate from the schedule, rounded), due on signing and credited against the first monthly invoice(s).
   - Then **monthly by percent complete** on each deliverable, processing included.
-- Credit any paid-findings deposit against the first payment. T&M NTE, subscription and public-agency monthly terms are unchanged.
-- **Quick, small jobs bill 100 percent up front** (Chris, 2026-10-25): a fixed fee under $5,000 delivered within about three weeks (foot-in-the-door offers: paid findings, clearance letters, Snapshots, small Initial Screening Reports, a single permit memo) is due in full on signing, **unless the client has an established track record** (see Payment standing), in which case it bills on delivery.
+- Apply any credit the Step 1 ladder gives against the first payment (a Site Walk credited in full toward 2A Field Verification if signed within 90 days; a legacy findings deposit collected before 2026-10-30). T&M NTE, subscription and public-agency monthly terms are unchanged.
+- **Quick, small jobs bill 100 percent up front** (Chris, 2026-10-25): a fixed fee under $5,000 delivered within about three weeks (foot-in-the-door offers: clearance letters, a single permit memo; the Step 1 planner levels are always paid on order) is due in full on signing, **unless the client has an established track record** (see Payment standing), in which case it bills on delivery.
 - **Security deposits for clients flagged "Deposit required"** (see Payment standing): in addition to the terms above, a deposit equal to about one month of expected billing (at least $1,000; 10 percent of the contract for jobs over $50,000), held and applied to the final invoice, not to the first one. Name it in the task order's billing paragraph as a security deposit.
 
 ### Payment standing (who pays up front or a deposit)
@@ -67,9 +67,9 @@ Check the standing before writing the billing paragraph: call the `payment_stand
 - Billing infrastructure: recurring billing now runs in **Productive** — the sales deal's services become the project budget at onboarding, and anchor clients are invoiced annually from Productive. Do not let infra concerns block the deal.
 - Subscription is a candidate Operations Manual addition to the Billing Types section; flag for the Pending Updates queue.
 
-## Step 1 pricing (1a / 1b)
+## Step 1 pricing (Q1 Screening)
 
-Step 1 has two tiers. **1a Screening** is the subscription tool (above). **1b Initial Screening Report** is fixed fee: **$2,500 standard** for a substantial multi-pathway analysis (the T Street ISR — five development options, confidence-tagged findings, state-law preemption work — is the reference). Reserve **$1,000 for genuinely small or simple parcels only**; substantial ISRs priced at $1,000 lose money. Batch small/simple parcels in the same neighborhood to keep per-parcel cost down. This is the inverse of the cost-floor rule above — don't underprice substantial analysis any more than you'd overprice a trivial one.
+Step 1 is priced by the model's pricing feed (`canon/pilot.yaml`), not here and not in a task order; `roadmap-scoping` has the ladder and `references/scale-test-and-pricing.md` there the detail. As of 2026-10-30: the membership (Starter $49, Pro $149, Team $399 a month; 30-day trial; the automated Screen 1A and Scenarios read 1B come from its allowances), and the planner levels 1C: Planner Review $500 ($400 for members), credited up to $500 into a Strategy Session; Strategy Session $1,000 standard or $2,500 complex by the scale test; Site Walk $1,000 local or $2,500 remote or large plus expenses, credited toward 2A Field Verification if signed within 90 days. The old 1a / 1b tiers (the $2,500 / $1,000 Initial Screening Report, the screening-tool subscription, the findings deposit) are retired; do not quote them. Desktop analysis beyond a Strategy Session is scoped as task order deliverables at Q2 and later.
 
 ## Hours benchmarks (reference ranges)
 

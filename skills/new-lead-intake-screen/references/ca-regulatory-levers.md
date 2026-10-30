@@ -1,10 +1,10 @@
 # California Regulatory Levers
 
-A screening reference for the state reform-law pathways that can unlock development potential beyond base zoning. Used in Stage 5.4 to flag candidates for the findings email and the proposed ISR scope.
+A screening reference for the state reform-law pathways that can unlock development potential beyond base zoning. Used in Stage 5.4 to flag candidates for the findings email and the proposed next step.
 
-> **Scope of use.** This file supports the **initial strategic screen**, not the paid analysis. In the free screen, name the plausible pathway, cite the governing code, and note the obvious disqualifiers — nothing more. The defensible determination (eligibility, exact yield, interaction with local ordinances and Housing Element status) is a Step 1 ISR deliverable. Never present a lever as secured.
+> **Scope of use.** This file supports the **initial strategic screen**, not the paid analysis. In the free screen, name the plausible pathway, cite the governing code, and note the obvious disqualifiers — nothing more. The defensible determination (eligibility, exact yield, interaction with local ordinances and Housing Element status) is paid work (a Strategy Session or a task order deliverable). Never present a lever as secured. The Cox Entitlement Model register comes first for any rule it covers; this file is a screening aid, not a source to cite.
 
-> **Maintenance.** California amends housing law nearly every legislative cycle; section numbers shift on recodification (the ADU statutes were recodified in 2025). Verify current text before relying on any entry in paid work. This file is the single source of truth shared by the intake screen and ISR-stage regulatory analysis — update it once, in one place. Candidate canonical home: Cox Operations Manual (regulatory reference) or Component Library. Backfill lessons from each ISR (most recently A-Plus Construction) here.
+> **Maintenance.** California amends housing law nearly every legislative cycle; section numbers shift on recodification (the ADU statutes were recodified in 2025). Verify current text before relying on any entry in paid work. This file is a screening aid shared by the intake screen and the paid regulatory analysis — update it once, in one place. The Cox Entitlement Model register is the source of truth for any rule it covers; where it does not, cite the official code only and file a register request. Backfill lessons from each paid analysis (most recently the A-Plus Construction ISR) here.
 
 ## How to use in the screen
 
@@ -52,7 +52,7 @@ A screening reference for the state reform-law pathways that can unlock developm
 ### Housing Accountability Act / Builder's Remedy
 - **Unlocks:** Constrains denial of compliant housing; Builder's Remedy applies where the jurisdiction lacks a compliant Housing Element.
 - **Citation:** Gov. Code §65589.5.
-- **Disqualifiers / notes:** Builder's Remedy is fact-sensitive and politically contested; flag as a possibility for counsel/ISR analysis, not a casual recommendation.
+- **Disqualifiers / notes:** Builder's Remedy is fact-sensitive and politically contested; flag as a possibility for counsel and the paid analysis, not a casual recommendation.
 
 ### SB 684 / SB 1123 — small-lot / starter-home subdivision streamlining
 - **Unlocks:** Ministerial subdivision and approval for small multi-unit/starter-home projects on qualifying lots.

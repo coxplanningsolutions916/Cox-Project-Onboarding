@@ -7,12 +7,12 @@ Draft the onboarding invoice per the proposal's payment terms. Same rail as ever
 - **Fixed-fee, unspecified terms:** small job (documentation under $20,000) = `round(documentation_fees * 0.50)`; larger job = the estimated first month of effort. Older task orders signed on 40/40/20 keep 40%.
 - **Fixed-fee with a schedule in the proposal:** use it (50/50, milestone %, etc.).
 - **T&M NTE / monthly / public-agency:** usually **no** down-payment invoice — first bill is monthly-on-actuals. Create the project; skip this invoice; note monthly billing.
-- **Deposit credit:** if a paid-findings deposit was collected (e.g. $500), add it as a **negative line** so it nets out (e.g., 40% of $10,000 = $4,000, minus $500 credit = $3,500 due).
+- **Credit:** if a credit is owed (a Site Walk fee toward 2A Field Verification when signed within 90 days, e.g. $1,000; or a legacy findings deposit), add it as a **negative line** so it nets out (e.g., 50% of $10,000 = $5,000, minus a $1,000 Site Walk credit = $4,000 due).
 
 ## Build (QBO MCP)
 
 1. **Customer** — `qbo_contact_search_customer(customer_name=<legal entity>)`; if `found=false`, `qbo_contact_create_customer(display_name, first/last, additional_params={billing_address, email})`.
-2. **Line items** — use the **phase service items** so it maps in QBO (`qbo_catalog_search_products(["00 Project Management","01 Assessment", …])`; Cox carries `00…05`). For a simple % down payment, one line on the dominant phase (or "00 Project Management") is fine — description e.g. *"40% down payment — <Project> (Task Order 1)."* `taxable=false`. Add the **deposit-credit** as a second, negative-amount line (`amount = -<deposit>`, description *"Credit — paid initial findings deposit"*).
+2. **Line items** — use the **phase service items** so it maps in QBO (`qbo_catalog_search_products(["00 Project Management","01 Assessment", …])`; Cox carries `00…05`). For a simple % down payment, one line on the dominant phase (or "00 Project Management") is fine — description e.g. *"40% down payment — <Project> (Task Order 1)."* `taxable=false`. Add any **credit** as a second, negative-amount line (`amount = -<credit>`, description *"Credit — Site Walk <invoice #>"* or *"Credit — paid initial findings deposit"* for a legacy one).
 3. **Create the invoice (does NOT email)** — `qbo_sales_create_invoice` with:
    - `customer_data.customer_id`
    - the line item(s) above (with ≤100-char `summarized_description` where needed)

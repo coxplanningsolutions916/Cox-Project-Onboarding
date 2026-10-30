@@ -1,6 +1,6 @@
 ---
 name: deal-onboarding
-description: "Onboard an approved/won Cox Planning Solutions deal — take a deal card with an approved proposal all the way to a live billable project in Productive plus a drafted down-payment invoice ready to send. Use when a proposal has been approved/signed (or the Automator card is Won) and the task is to stand up the engagement: create the Productive project + budget, copy the scoped services onto it, put the project on the dashboard, and draft the first (down-payment) invoice per the proposal's payment terms. Triggers: 'onboard [client/deal],' 'onboard this deal,' 'the proposal is approved/signed,' 'they signed,' 'kick off the project,' 'set up the project and down payment invoice,' 'take this deal to a project,' 'won deal,' or a deal card plus 'onboard.' Do NOT use for the pre-proposal paid deposit (use paid-findings-report), for building/pricing the proposal (use proposal-scoping), for a change order to an existing Task Order (use change-order-scoping), or for day-to-day ops."
+description: "Onboard an approved/won Cox Planning Solutions deal — take a deal card with an approved proposal all the way to a live billable project in Productive plus a drafted down-payment invoice ready to send. Use when a proposal has been approved/signed (or the Automator card is Won) and the task is to stand up the engagement: create the Productive project + budget, copy the scoped services onto it, put the project on the dashboard, and draft the first (down-payment) invoice per the proposal's payment terms. Triggers: 'onboard [client/deal],' 'onboard this deal,' 'the proposal is approved/signed,' 'they signed,' 'kick off the project,' 'set up the project and down payment invoice,' 'take this deal to a project,' 'won deal,' or a deal card plus 'onboard.' Do NOT use for selling a Step 1 planner level (use roadmap-scoping or paid-findings-report), for building/pricing the proposal (use proposal-scoping), for a change order to an existing Task Order (use change-order-scoping), or for day-to-day ops."
 ---
 
 # Deal Onboarding (approved proposal → project + down-payment invoice)
@@ -31,7 +31,7 @@ A client's signature on the dashboard moves the deal to **Onboarding** on both b
 A proposal set up before this existed is marked "Already set up by hand" on its card. **The rest of this skill is only for
 a deal won outside the dashboard** (no dashboard proposal).
 
-The sales→delivery bridge. Downstream of `proposal-scoping` (which built the estimate as **services on the Productive sales deal** and produced the proposal) and, when relevant, `paid-findings-report` (which may have collected a credited deposit). This skill converts an **approved/won** deal into a **live billable project** and drafts the **down-payment invoice** — then you approve and it sends.
+The sales→delivery bridge. Downstream of `proposal-scoping` (which built the estimate as **services on the Productive sales deal** and produced the proposal) and, when relevant, a Step 1 planner level sold through `roadmap-scoping` or `paid-findings-report` (a Site Walk carries a credit into 2A Field Verification). This skill converts an **approved/won** deal into a **live billable project** and drafts the **down-payment invoice** — then you approve and it sends.
 
 **Non-negotiables:**
 - **The approved proposal is the contract — its payment terms are the source of truth.** Read them; don't assume. 40% down is only the *default for fixed-fee* when the proposal doesn't say otherwise.
@@ -42,7 +42,7 @@ The sales→delivery bridge. Downstream of `proposal-scoping` (which built the e
 
 1. Read the deal's **`00_Deal_Registry.md`** at the top of `Sales/Proposals/[Lead]/` (Google Drive MCP) and the **approved proposal** in that folder. Pull: client legal entity + contact/email, project name, property/APN, the scoped **services** (the estimate), the **contract value**, and the **payment terms** (down-payment %, milestones, or T&M/monthly).
 2. Confirm the deal is actually **approved/Won** (signed proposal, or Automator card in Closed Won). If it's not, stop and say so — do not onboard an unapproved deal. (A proposal signed on the dashboard is onboarded there: see the top of this skill.)
-3. If a **paid-findings deposit** was collected (see `paid-findings-report`), note the amount to **credit** against the down payment.
+3. Note any **credit** owed against the down payment: a Site Walk fee credited in full toward 2A Field Verification when the task order was signed within 90 days of the walk, or a legacy findings deposit collected before 2026-10-30. (A Planner Review credits only into a Strategy Session, never into a task order.)
 
 ## Stage 1 — Create the Productive project + budget, copy the services
 
@@ -100,7 +100,7 @@ Read the payment terms from Stage 0 and follow them — they govern. Then create
 - **Fixed-fee, terms unspecified →** apply the size rule (proposal-scoping `billing-and-fees.md`, Payment terms): under $20,000 of documentation, **50 percent of the documentation fees** (not the processing retainer); $20,000 or more, **the estimated first month of effort**. Task orders signed under the old default keep their 40/40/20.
 - **Fixed-fee with a stated schedule →** use the proposal's schedule (e.g., 50/50, milestone splits).
 - **T&M NTE / public-agency / monthly (e.g., Panattoni, agencies) →** typically **no down payment** — first invoice is monthly-on-actuals per the terms. If so, create the project but draft **no** down-payment invoice; note that billing is monthly.
-- **Credit any paid-findings deposit** (e.g., a $500 findings fee) as a negative line so it nets against the down payment.
+- **Net any credit owed** (a Site Walk into 2A Field Verification, or a legacy findings deposit) as a negative line so it nets against the down payment.
 
 Invoice construction (all in `references/down-payment-invoice.md`): QBO customer (search/create), **phase service line items** (map to `00…05` service items), **auto-numbered (do NOT set a custom reference)**, the standard **payment-options memo**, and **no business payment methods enabled** (the account-level "client pays the fee" gives check + client-pays ACH; Cox never eats a fee).
 
@@ -125,5 +125,5 @@ On your **explicit go-ahead**, Kristin issues it in Productive and pushes it to 
 - **No fee to Cox.** Invoices go out check + client-pays ACH (never accept cards/ACH as business methods); card-on-request = enable cards on that one invoice + a 3% line.
 - **Chronological invoice #s.** Let QBO auto-number; never set a custom reference.
 - **One deal at a time.** Onboarding is a client commitment — explicit per deal, never a bulk sweep. (`onboard_from_deal.py --scan` is read-only and only *lists* deals awaiting onboarding for the brief.)
-- **Credit deposits.** Any paid-findings deposit credits the down payment.
+- **Credit what the ladder credits.** A qualifying Site Walk fee, or a legacy findings deposit, credits the down payment.
 - **No project without a dashboard.** Do not report onboarding complete until `discover_projects.py` reports nothing outstanding. A project that is not on the dashboard is not in the firm's financial numbers, however small the fee.

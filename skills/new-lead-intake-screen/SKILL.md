@@ -1,6 +1,6 @@
 ---
 name: new-lead-intake-screen
-description: "Run the Cox Planning Solutions pre-handoff intake and property screen for a new lead. Use when a new prospect calls or books an appointment and the goal is to set up the proposals folder, file the call transcript and intake documents, screen the property for zoning/general plan, development standards, environmental constraints, and California regulatory levers, and draft a lead-with-value findings email with a proposed scope and approximate budget. Triggers include: 'new lead,' 'got a call from,' 'booked an appointment with,' 'intake a lead,' 'screen a property,' 'property screen,' 'constraints screen,' 'scope a new prospect,' 'set up a proposals folder,' or a prospect name plus a property address or APN. Do NOT use for active client projects already under a Task Order (use deal-onboarding), or for the full paid regulatory analysis inside a Step 1 ISR (this skill produces the initial strategic screen only)."
+description: "Run the Cox Planning Solutions pre-handoff intake and property screen for a new lead. Use when a new prospect calls or books an appointment and the goal is to set up the proposals folder, file the call transcript and intake documents, screen the property for zoning/general plan, development standards, environmental constraints, and California regulatory levers, and draft a lead-with-value findings email with a proposed scope and approximate budget. Triggers include: 'new lead,' 'got a call from,' 'booked an appointment with,' 'intake a lead,' 'screen a property,' 'property screen,' 'constraints screen,' 'scope a new prospect,' 'set up a proposals folder,' or a prospect name plus a property address or APN. Do NOT use for active client projects already under a Task Order (use deal-onboarding), for selling or delivering a paid planner level (use roadmap-scoping), or for the full paid regulatory analysis (this skill produces the initial strategic screen only)."
 ---
 
 # New Lead Intake and Property Screen
@@ -73,13 +73,13 @@ Screen the parcel against:
 
 Report what is mapped versus what would require field verification. Do not state mapped or client-reported conditions as field-confirmed findings.
 
-**Maps.** Figure-quality NWI and CARI map exhibits (parcel boundary over aerial with features overlaid) are a paid ISR deliverable, not a free-screen output. In the screen, record presence, counts, the identified features, the centroid/envelope, and the service URLs so the ISR figure step is teed up. Generate exhibits at ISR.
+**Maps.** Figure-quality NWI and CARI map exhibits (parcel boundary over aerial with features overlaid) are paid work (a Strategy Session or a task order deliverable), not a free-screen output. In the screen, record presence, counts, the identified features, the centroid/envelope, and the service URLs so the figure step is teed up. Generate exhibits in the paid work.
 
 ### 5.4 Regulatory lever scan — initial and strategic
 
 Using the zoning and General Plan base from 5.1, scan for **California reform-law pathways that could unlock development potential** — density bonus, ADU/JADU stacking, SB 9, SB 330 protections, ministerial streamlining, and others. See `references/ca-regulatory-levers.md` for trigger conditions, citations, and disqualifiers.
 
-This is an **initial flag, not the paid analysis.** The defensible lever analysis is a Step 1b ISR deliverable. Here, the purpose is to surface which pathways plausibly apply so they can be positioned as scope in the findings email — the lever flag is what sells the ISR. Frame levers as candidates to confirm, cite the governing code, and note the obvious disqualifiers. Do not overstate yield or present a pathway as secured.
+This is an **initial flag, not the paid analysis.** The defensible lever analysis is paid work: a planner level (Strategy Session) or a Task Order 1 deliverable. Here, the purpose is to surface which pathways plausibly apply so they can be positioned as scope in the findings email — the lever flag is what sells the next step. Frame levers as candidates to confirm, cite the governing code, and note the obvious disqualifiers. Do not overstate yield or present a pathway as secured.
 
 ### 5.5 Seed the draft Roadmap
 Every prospect gets a draft Roadmap in the Cox Entitlement Model before Task Order 1 goes out (Chris, 2026-10-25), whether or not they buy a Roadmap. Start it from this session with the cox-productive connector's **`start_draft_roadmap`**; no repo access or Claude Code session is needed.
@@ -100,10 +100,14 @@ A lost lead keeps its record: call **`mark_roadmap_status(key, "lost", reason, e
 Produce a lead-with-value email that takes the prospect's temperature. Three parts:
 
 1. **Initial findings** — what the screen shows: zoning/GP, the standards that matter, the live constraints, and the regulatory levers worth pursuing. Substantive but not exhaustive; this demonstrates capability without delivering the paid product.
-2. **Proposed scope of work** — the engagement that turns the screen into a defensible product, usually the Step 1b Initial Screening Report ($2,500 standard; $1,000 only for small or simple parcels), and where relevant a Step 1a screening-tool subscription. Route the Stage 5.4 lever flags into scope line items so the strategy reads as the reason to engage.
-3. **Approximate budget** — a range, not a fixed number, consistent with the Mode 1 rate table and hours benchmarks. Show the range only; the fee backup is internal and never appears in client-facing material.
+2. **Proposed next step** — from the current Step 1 ladder (roadmap-scoping; prices from the model's pricing feed, `canon/pilot.yaml`, on the day, never from memory). As of 2026-10-30:
+   - **The portal trial** for a prospect who wants to look on their own: 30 days, the map, 3 Screens and a Scenarios read, no card. Membership from $49 a month once card billing is live.
+   - **A planner level** for a prospect who wants Cox's read before committing: a Planner Review ($500, $400 for members), a Strategy Session ($1,000 standard or $2,500 complex by the scale test, confirmed by a planner before payment; a Planner Review comes off it up to $500), or a Site Walk ($1,000 local or $2,500 remote or large, plus expenses; credited toward 2A Field Verification if signed within 90 days).
+   - **Task Order 1** for a prospect ready to engage: built from the draft Roadmap's deficiencies (5.5), handed to proposal-scoping. Projects start at a signed task order.
+   Route the Stage 5.4 lever flags and the deficiencies into the next step so the strategy reads as the reason to engage. The automated read is "Scenarios"; the paid level 2 is the "Strategy Session". Never offer the retired Roadmap, Roadmap Plus, ISR or findings-deposit prices.
+3. **Approximate budget** — for a task order, a range, not a fixed number, consistent with the Mode 1 rate table and hours benchmarks; for a planner level, the feed's price. Show the range only; the fee backup is internal and never appears in client-facing material.
 
-Write in Chris's voice per `cox-document-formatting` (first-person plural, plain language, no buzzwords, no exclamation marks). Include the standard non-guarantee: Cox guarantees correctly executed work, not permit approvals or valuation outcomes. Answer follow-up questions with enough to keep the conversation moving, not the full analysis.
+Write in Chris's voice per `cox-document-formatting` (first-person plural, plain language, no buzzwords, no exclamation marks). Include the standard non-guarantee: Cox guarantees correctly executed work, not permit approvals, timelines or valuation outcomes. "Cox" or "Cox Planning Solutions", never "CPS". Answer follow-up questions with enough to keep the conversation moving, not the full analysis.
 
 ## Stage 7 — Seed the deal registry
 
@@ -128,7 +132,7 @@ keeps it current. Full convention in `references/deal-registry.md`. Two seeds:
    - Client entity:   <legal entity>      Contact: <name / email / phone>
    - Agent / referrer: <name>             (if any)
    - Property / APN:  <address> / <APN>
-   - DDL step:        <1a | 1b | 2 | …>
+   - DDL step:        <1A Screen | 1B Scenarios | 1C planner level | Q2 … (TO1)>
    - Current stage:   <pipeline stage>     Value: <range or TBD>
 
    ## Log
@@ -148,5 +152,6 @@ append rather than overwrite.
 - **Comprehensive by default.** Only throttle to a quick screen if the user asks.
 - **Internal vs. client-facing.** Fee backup, hours, and cost floors stay internal. The email shows clean findings, scope, and a budget range.
 - **No guaranteed outcomes.** Never state or imply approval, timeline certainty, or valuation.
+- **Prices from the feed.** Any Step 1 price in the email comes from `canon/pilot.yaml` that day; roadmap-scoping has the ladder.
 - **Citations to confirmed facts.** Distinguish mapped/client-reported conditions from field-confirmed findings. Levers are candidates pending the paid analysis.
 - **Hand-offs.** Once the prospect bites and a proposal is warranted, the scope and budget here feed `proposal-scoping` (Mode 1) via the deal registry seeded in Stage 7; once won, `deal-onboarding` takes over onboarding. The VIP / public-agency exception (no down payment, monthly invoicing — e.g., Panattoni, public agencies) is handled downstream at onboarding, not here.
