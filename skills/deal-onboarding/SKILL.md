@@ -42,7 +42,7 @@ The sales→delivery bridge. Downstream of `proposal-scoping` (which built the e
 
 1. Read the deal's **`00_Deal_Registry.md`** at the top of `Sales/Proposals/[Lead]/` (Google Drive MCP) and the **approved proposal** in that folder. Pull: client legal entity + contact/email, project name, property/APN, the scoped **services** (the estimate), the **contract value**, and the **payment terms** (down-payment %, milestones, or T&M/monthly).
 2. Confirm the deal is actually **approved/Won** (signed proposal, or Automator card in Closed Won). If it's not, stop and say so — do not onboard an unapproved deal. (A proposal signed on the dashboard is onboarded there: see the top of this skill.)
-3. Note any **credit** owed against the down payment: a Site Walk fee credited in full toward 2A Field Verification when the task order was signed within 90 days of the walk, or a legacy findings deposit collected before 2026-10-30. (A Planner Review credits only into a Strategy Session, never into a task order.)
+3. Note any **credit** owed against the down payment: a Site Walk fee, credited in full and netted on the Task Order 1 down payment (Chris confirmed 2026-10-30) when the task order was signed within 90 days of the walk, or a legacy findings deposit collected before 2026-10-30. (A Planner Review credits only into a Strategy Session, never into a task order.)
 
 ## Stage 1 — Create the Productive project + budget, copy the services
 

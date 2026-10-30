@@ -48,7 +48,7 @@ The engine still names the outcomes by their old rung keys (`roadmap` = standard
 
 ## Internal hours basis
 
-Record any hours basis as `estimated_hours` on the Productive service, never in a name or anything client-facing. The hours behind the repriced Strategy Session were not published with the 2026-10-30 change; ask Chris rather than reuse the old Roadmap hours.
+Record any hours basis as `estimated_hours` on the Productive service, never in a name or anything client-facing. Hours behind the Strategy Session (Chris, 2026-10-30; `staff_hours` in `canon/pilot.yaml`): **standard, 4 hours of Chris's time**; **complex, about 10 hours**, Chris alone or Chris with junior staff depending on the project. Preliminary mapping or multi-agency approval requirements add hours; say so in the estimate and budget the extra as junior time where it fits.
 
 ## What the client is told about price
 
